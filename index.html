@@ -55,10 +55,19 @@
         <p class="tagline">Get more from every AI subscription.</p>
         <p class="lede">The independent community for people who pay for multiple AI services.</p>
         <p class="value">Compare plans, track resets, monitor subscription changes, share advanced workflows, and make better keep-or-cancel decisions with other paid AI power users.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#digest">Get the weekly Reset and Limits Digest</a>
+        <div class="hero-signup" id="digest">
+          <form class="digest-form digest-form-hero" action="mailto:hello@subsmaxxers.com" method="get" enctype="text/plain">
+            <input type="hidden" name="subject" value="Reset and Limits Digest — subscribe">
+            <div class="hero-signup-row">
+              <div class="field">
+                <label for="digest-email">Email</label>
+                <input id="digest-email" name="body" type="email" autocomplete="email" required placeholder="you@example.com">
+              </div>
+              <button class="btn btn-primary" type="submit">Get the weekly digest</button>
+            </div>
+            <p class="privacy-line">Weekly resets and limit changes. Discord is not open yet. We will not sell this list. <a href="privacy.html">Privacy</a>.</p>
+          </form>
         </div>
-        <p class="cta-note">The Discord community is not open yet. Leave your email for the digest. We will not publish a join link until the owner says so.</p>
         <div class="hero-rule" aria-hidden="true"><span></span><span></span></div>
       </div>
       <aside class="hero-aside">
@@ -234,38 +243,6 @@
       </div>
     </section>
 
-    <section class="section band" id="digest" aria-labelledby="digest-title">
-      <div class="section-inner digest-grid">
-        <div>
-          <p class="eyebrow">Owned channel</p>
-          <h2 id="digest-title">Reset and Limits Digest</h2>
-          <p>Weekly changes, verified resets, member reports, and one keep-or-cancel insight — for people who pay for AI on purpose.</p>
-          <p>Each issue covers what changed, what reset, what members reported, what remains uncertain, one high-value workflow, and one keep-or-cancel insight. Sources and verification labels travel with the claims. This is not a generic AI-news briefing and not a coupon list.</p>
-          <p>You do not need to join Discord to read the Digest. Community membership does not require the list. Either works alone.</p>
-        </div>
-        <div class="embed-slot">
-          <p class="placeholder-tag">[BEEHIIV_EMBED] — local mailto fallback until the owner pastes the Beehiiv form</p>
-          <form class="digest-form" action="mailto:hello@subsmaxxers.com" method="get" enctype="text/plain">
-            <input type="hidden" name="subject" value="Reset and Limits Digest — subscribe">
-            <div class="field">
-              <label for="digest-email">Email</label>
-              <input id="digest-email" name="body" type="email" autocomplete="email" required placeholder="you@example.com">
-            </div>
-            <div class="field">
-              <label for="digest-name">First name <span style="font-weight:400;color:var(--graphite)">(optional)</span></label>
-              <input id="digest-name" name="name" type="text" autocomplete="given-name">
-            </div>
-            <label class="check">
-              <input type="checkbox" name="product_research" value="yes">
-              <span>Also send occasional product-research invitations. Optional. Never required.</span>
-            </label>
-            <button class="btn btn-primary btn-on-light" type="submit">Get the weekly Reset and Limits Digest</button>
-            <p class="privacy-line">We will not sell this list. We will not add you to product pitches unless you opt in. Unsubscribe at any time. See the <a href="privacy.html">privacy policy</a>. Until Beehiiv is live, this form opens a mail draft to a placeholder address — replace the block marked <code>[BEEHIIV_EMBED]</code>.</p>
-          </form>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="section-inner">
         <p class="eyebrow">Questions</p>
@@ -333,7 +310,6 @@
       </div>
       <div>
         <nav class="footer-nav" aria-label="Footer">
-          <a href="#join">Join</a>
           <a href="#digest">Digest</a>
           <a href="guidelines.html">Community guidelines</a>
           <a href="privacy.html">Privacy</a>
