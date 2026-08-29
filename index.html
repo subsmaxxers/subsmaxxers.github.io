@@ -4,321 +4,135 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SubsMaxxers — Get more from every AI subscription.</title>
-  <meta name="description" content="Independent community for people who pay for multiple AI services and want more practical value from their subscription stack.">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Independent community for people who pay for more than one AI. Resets, limits, plan changes, keep-or-cancel.">
+  <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#12161C">
+  <link rel="canonical" href="https://subsmaxxers.com/">
+  <link rel="alternate" type="text/plain" href="https://subsmaxxers.com/llms.txt" title="llms.txt">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/avatar.png" sizes="512x512" type="image/png">
   <link rel="apple-touch-icon" href="assets/avatar.png">
+  <meta property="og:site_name" content="SubsMaxxers">
   <meta property="og:title" content="SubsMaxxers — Get more from every AI subscription.">
-  <meta property="og:description" content="The independent community for people who pay for multiple AI services.">
-  <meta property="og:image" content="assets/social-header.png">
+  <meta property="og:description" content="Independent community for people who pay for more than one AI. Resets, limits, plan changes, keep-or-cancel.">
+  <meta property="og:url" content="https://subsmaxxers.com/">
+  <meta property="og:image" content="https://subsmaxxers.com/assets/social-header.png">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="assets/social-header.png">
+  <meta name="twitter:title" content="SubsMaxxers">
+  <meta name="twitter:description" content="Get more from every AI subscription.">
+  <meta name="twitter:image" content="https://subsmaxxers.com/assets/social-header.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://subsmaxxers.com/#org",
+        "name": "SubsMaxxers",
+        "alternateName": ["Subs Maxxers", "subsmaxxers"],
+        "url": "https://subsmaxxers.com/",
+        "slogan": "Get more from every AI subscription.",
+        "description": "Independent community for people who pay for multiple AI subscriptions. Tracks resets, usage limits, and plan changes with verification labels. Does not support account sharing or bypassing provider limits.",
+        "email": "hello@subsmaxxers.com",
+        "sameAs": [
+          "https://x.com/subsmaxxers",
+          "https://github.com/subsmaxxers",
+          "https://www.youtube.com/@subsmaxxers",
+          "https://www.reddit.com/r/subsmaxxers"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://subsmaxxers.com/#site",
+        "url": "https://subsmaxxers.com/",
+        "name": "SubsMaxxers",
+        "publisher": { "@id": "https://subsmaxxers.com/#org" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://subsmaxxers.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is SubsMaxxers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SubsMaxxers is an independent community for people who pay for more than one AI subscription. It helps them get more value from that stack by tracking resets, usage limits, and plan changes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does SubsMaxxers verify reset and limit claims?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Claims are labeled Official, Confirmed, Reported, Disputed, or Outdated. Official documentation outranks community conversation when they conflict."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does SubsMaxxers help share accounts or bypass usage limits?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Account sharing, login rental, trial abuse, and bypassing provider limits are not allowed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I join SubsMaxxers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Discord community is not open yet. The weekly Reset and Limits Digest is available by email on subsmaxxers.com."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,600;0,6..72,700;1,6..72,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:opsz,wght@6..72,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <a class="skip" href="#main">Skip to content</a>
+<body class="home">
+  <a class="skip" href="#digest">Skip to digest</a>
 
-  <header class="site-header">
-    <div class="nav-wrap">
-      <a class="nav-brand" href="index.html">
-        <img src="assets/avatar.png" alt="" width="36" height="36">
-        <span class="wordmark">SubsMa<span class="xx">xx</span>ers</span>
-      </a>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
-      <label for="nav-toggle" class="nav-toggle-btn">Menu</label>
-      <nav class="site-nav" aria-label="Primary">
-        <ul>
-          <li><a href="#who">Who it is for</a></li>
-          <li><a href="#different">Labels</a></li>
-          <li><a href="#discussions">Discussions</a></li>
-          <li><a href="#rules">Rules</a></li>
-          <li><a href="#digest">Digest</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="guidelines.html">Guidelines</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
-        </ul>
+  <main class="sheet">
+    <p class="kicker">TLDR</p>
+    <h1 class="wordmark">SubsMa<span class="xx">xx</span>ers</h1>
+    <p class="tagline">Get more from every AI subscription.</p>
+    <p class="lede">SubsMaxxers is an independent community for people who pay for more than one AI subscription. It tracks resets, usage limits, and plan changes so you can keep or cancel with better information.</p>
+
+    <ul class="tldr">
+      <li>You pay for more than one AI. This is the room for that stack.</li>
+      <li>Resets, limits, plan changes, keep-or-cancel. Labeled: Official, Confirmed, Reported, Disputed, Outdated.</li>
+      <li>Independent. Not a deal club. No account sharing. No bypassing caps.</li>
+    </ul>
+
+    <section id="digest" aria-labelledby="digest-title">
+      <h2 id="digest-title">Right now</h2>
+      <p class="now">Discord is not open. Weekly Reset and Limits Digest is.</p>
+      <form class="digest-form" action="mailto:hello@subsmaxxers.com" method="get" enctype="text/plain">
+        <input type="hidden" name="subject" value="Reset and Limits Digest — subscribe">
+        <label class="sr" for="digest-email">Email</label>
+        <div class="row">
+          <input id="digest-email" name="body" type="email" autocomplete="email" required placeholder="you@example.com">
+          <button class="btn" type="submit">Get the digest</button>
+        </div>
+        <p class="fine">We will not sell the list. <a href="privacy.html">Privacy</a></p>
+      </form>
+    </section>
+
+    <footer class="foot">
+      <span>Independent. Not affiliated with any AI provider.</span>
+      <nav>
+        <a href="privacy.html">Privacy</a>
+        <a href="guidelines.html">Rules</a>
       </nav>
-    </div>
-  </header>
-
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="hero-inner">
-      <div>
-        <p class="kicker">The community for multi-AI subscribers.</p>
-        <h1 id="hero-title" class="wordmark">SubsMa<span class="xx">xx</span>ers</h1>
-        <p class="tagline">Get more from every AI subscription.</p>
-        <p class="lede">The independent community for people who pay for multiple AI services.</p>
-        <p class="value">Compare plans, track resets, monitor subscription changes, share advanced workflows, and make better keep-or-cancel decisions with other paid AI power users.</p>
-        <div class="hero-signup" id="digest">
-          <form class="digest-form digest-form-hero" action="mailto:hello@subsmaxxers.com" method="get" enctype="text/plain">
-            <input type="hidden" name="subject" value="Reset and Limits Digest — subscribe">
-            <div class="hero-signup-row">
-              <div class="field">
-                <label for="digest-email">Email</label>
-                <input id="digest-email" name="body" type="email" autocomplete="email" required placeholder="you@example.com">
-              </div>
-              <button class="btn btn-primary" type="submit">Get the weekly digest</button>
-            </div>
-            <p class="privacy-line">Weekly resets and limit changes. Discord is not open yet. We will not sell this list. <a href="privacy.html">Privacy</a>.</p>
-          </form>
-        </div>
-        <div class="hero-rule" aria-hidden="true"><span></span><span></span></div>
-      </div>
-      <aside class="hero-aside">
-        <img src="assets/avatar.png" alt="SubsMaxxers mark: a serif double-x over a copper double bar." width="220" height="220">
-      </aside>
-    </div>
-    <div class="hero-cut" aria-hidden="true"></div>
-  </section>
-
-  <main id="main">
-    <section class="section" id="who" aria-labelledby="who-title">
-      <div class="section-inner">
-        <p class="eyebrow">Audience</p>
-        <h2 id="who-title">Who it is for</h2>
-        <p class="deck">A working room for people who already treat paid AI as an operating cost. Subscription count is not a status tier and not an admission test.</p>
-        <div class="split">
-          <article class="card primary">
-            <h3>Primary</h3>
-            <p>People who already pay for several AI products — developers, founders, researchers, designers and creators, consultants and agencies, product managers, and serious enthusiasts.</p>
-          </article>
-          <article class="card also">
-            <h3>Also welcome</h3>
-            <p>People with one or two paid subscriptions who are building or evaluating a stack, comparing an upgrade, or contributing a useful firsthand observation.</p>
-          </article>
-          <article class="card not-for">
-            <h3>Not for</h3>
-            <ul>
-              <li>People hunting free trials, coupons, or gray-market access</li>
-              <li>Anyone looking to share, rent, or borrow logins</li>
-              <li>Prompt-spam and generic AI-news browsing</li>
-              <li>Vendor teams treating the room as an undisclosed channel</li>
-              <li>Anyone who wants a disguised sales funnel</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <hr class="hairline">
-
-    <section class="section" id="share" aria-labelledby="share-title">
-      <div class="section-inner">
-        <p class="eyebrow">The work</p>
-        <h2 id="share-title">What members share</h2>
-        <p class="deck">The center of the community is structured reset-and-limit intelligence — not chat lore. Observations are labeled, sourced, and dated.</p>
-        <ul class="share-list">
-          <li>What they are actually paying for</li>
-          <li>When legitimate access, credits, or allowances reset</li>
-          <li>Plan, price, feature, and policy changes</li>
-          <li>Tool comparisons for a specific job</li>
-          <li>Keep, cancel, upgrade, downgrade, or add decisions</li>
-          <li>High-value workflows that use more than one paid service</li>
-          <li>Outages and unusual account behavior, without turning differences into drama</li>
-          <li>Signals so no one has to monitor every provider alone</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section band" id="different" aria-labelledby="different-title">
-      <div class="section-inner">
-        <p class="eyebrow">Method</p>
-        <h2 id="different-title">What makes it different</h2>
-        <p class="deck">Every public reset, limit, or plan-change statement should carry provider, product, and plan; region or account context when it matters; a verification label; a source; and a last-verified date. Official documentation is not treated as the same thing as one person’s screenshot.</p>
-        <table class="label-table">
-          <thead>
-            <tr><th>Label</th><th>Meaning</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><span class="chip chip-official">Official</span></td>
-              <td>Supported by current provider documentation or an in-product notice</td>
-            </tr>
-            <tr>
-              <td><span class="chip chip-confirmed">Confirmed</span></td>
-              <td>Independently reproduced by at least two relevant members</td>
-            </tr>
-            <tr>
-              <td><span class="chip chip-reported">Reported</span></td>
-              <td>One member’s observation; not yet generalized</td>
-            </tr>
-            <tr>
-              <td><span class="chip chip-disputed">Disputed</span></td>
-              <td>Credible reports conflict</td>
-            </tr>
-            <tr>
-              <td><span class="chip chip-outdated">Outdated</span></td>
-              <td>Superseded, or no longer recently verified</td>
-            </tr>
-          </tbody>
-        </table>
-        <p class="note">An observation is not a universal rule. Limits can vary by plan, account, region, demand, model, feature, interface, or provider experimentation. We investigate those differences before we argue about them. We do not publish live provider-limit numbers on this page.</p>
-      </div>
-    </section>
-
-    <section class="section" id="discussions" aria-labelledby="discussions-title">
-      <div class="section-inner">
-        <p class="eyebrow">The room</p>
-        <h2 id="discussions-title">Example discussions</h2>
-        <p class="deck">These are the jobs the community is built to host. They are prompts, not testimonials, and they do not invent clocks, prices, or member counts.</p>
-        <div class="prompts">
-          <article class="prompt">
-            <p class="where">reset-watch</p>
-            <h3>When does my allowance reset, on this plan, in this region, on this interface?</h3>
-            <p>File a firsthand observation with plan, region, date, and a source. Suggest REPORTED. Staff assign the public label. No universal clocks.</p>
-          </article>
-          <article class="prompt">
-            <p class="where">plan-change-watch</p>
-            <h3>Did the provider change the plan, the price, or the unpublished cap?</h3>
-            <p>One change per post. Quote or link the official page, date it, and say who it appears to affect. Do not invent a number.</p>
-          </article>
-          <article class="prompt">
-            <p class="where">keep-cancel-upgrade</p>
-            <h3>Which two subscriptions overlap, and which one should I cancel?</h3>
-            <p>A real decision, a real stack, a real job. Name the overlap. Cost as a range you have re-checked — never a pasted invoice.</p>
-          </article>
-          <article class="prompt">
-            <p class="where">best-tool-for-the-job</p>
-            <h3>Which tool for this job, given the limits I still have this week?</h3>
-            <p>Name the job first. Tools second. “Best” means best for that job, not best model in the abstract.</p>
-          </article>
-          <article class="prompt">
-            <p class="where">#general → a forum</p>
-            <h3>Is this outage a reason to move work to another sub I already pay for?</h3>
-            <p>Check official status pages. Label the observation as an observation. File it properly if it matters.</p>
-          </article>
-          <article class="prompt">
-            <p class="where">#source-verification · the board</p>
-            <h3>What is actually official vs one person’s account?</h3>
-            <p>One screenshot is a report, not a rule. Conflicting observations are compared for plan, region, model, interface, and date before anyone is treated as wrong.</p>
-          </article>
-          <article class="prompt">
-            <p class="where">best-tool-for-the-job</p>
-            <h3>Turn a messy meeting transcript into action items a client can read.</h3>
-            <p>Constraints from the brief’s prompt bank: individual plans, no new invoice, stay inside the stack you already pay for.</p>
-          </article>
-          <article class="prompt">
-            <p class="where">#wins-and-workflows</p>
-            <h3>A research memo that has to be both cited and readable.</h3>
-            <p>Name the job, the paid tools, the split of labor, and what you would drop. Outcomes over prompts. No reset tricks.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section band-dim" id="rules" aria-labelledby="rules-title">
-      <div class="section-inner">
-        <p class="eyebrow">Standards</p>
-        <h2 id="rules-title">Community rules summary</h2>
-        <p class="deck">Get more from every AI subscription — legitimately. The public rules are short on purpose. They are enforced as written. Read the <a href="guidelines.html">full public guidelines</a> before you post.</p>
-        <ol class="rules-ol">
-          <li><strong>Legitimate value only.</strong> Official resets, observed behavior (labeled), plan changes, cost optimization, and high-value workflows are in. Account sharing, forced resets, limit bypass, trial abuse, payment fraud, and safeguard evasion are out. Asking is enough.</li>
-          <li><strong>No gray-market access.</strong> Do not offer, request, or broker passwords, shared logins, resale, rental, pooling, or seat lending.</li>
-          <li><strong>Redact before you post.</strong> Strip emails, names, account IDs, payment details, invoices, workspace names, API keys, org identifiers, and confidential work. Unredacted billing screenshots are removed.</li>
-          <li><strong>Label your claims.</strong> Do not present a rumor as a fact. Include provider, product, plan, region or account context, date, and a source.</li>
-          <li><strong>Disclose money and loyalty.</strong> Vendor, employee, investor, affiliate, or referral relationships belong in the first line, before the pitch.</li>
-          <li><strong>Do not impersonate a vendor — or us.</strong> Official documentation outranks this community when they conflict.</li>
-          <li><strong>No harassment, no spam.</strong> Critique a product. Do not hunt a person. No raids, invite spam, or referral blasts.</li>
-          <li><strong>Stay in the right room.</strong> Subscription count is not a status symbol. Do not turn this into a spend contest.</li>
-          <li><strong>Independent, not official.</strong> Nothing here is a substitute for a provider’s own terms, billing desk, or status page.</li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section" id="independence" aria-labelledby="independence-title">
-      <div class="section-inner">
-        <p class="eyebrow">Status</p>
-        <h2 id="independence-title">Independent, not a vendor channel</h2>
-        <div class="independence">
-          <p>SubsMaxxers is not affiliated with OpenAI, Anthropic, Google, Microsoft, or any other AI provider. <span class="updated">[VERIFY: keep this sentence current if the legal entity or any disclosed partnership changes.]</span></p>
-          <p>Vendors, employees, investors, and anyone posting a referral or affiliate link must disclose that relationship before they post. We do not speak for any provider. Official documentation always outranks community conversation when they conflict, and we will say so.</p>
-          <p>Community membership does not require using any future SubsMaxxers product. If a product is ever offered, participation will be opt-in. The community has to be useful on its own.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="faq" aria-labelledby="faq-title">
-      <div class="section-inner">
-        <p class="eyebrow">Questions</p>
-        <h2 id="faq-title">FAQ</h2>
-        <div class="faq">
-          <details>
-            <summary>What is SubsMaxxers?</summary>
-            <p>An independent community for people who pay for multiple AI services and want more practical value from their subscription stack. Primary home is Discord, with an owned email digest and a public Reset Board. We are not a news site, a prompt gallery, or a deal club.</p>
-          </details>
-          <details>
-            <summary>What does “subsmaxxing” mean?</summary>
-            <p>Intentionally maximizing the legitimate value, utility, and outcomes produced by one’s paid AI subscriptions. It does not mean consuming wastefully, forcing resets, sharing accounts, bypassing limits, exploiting trials, evading safeguards, or violating provider terms. Subsmaxxing is getting more legitimate work out of the AI subscriptions you already pay for — not getting around them.</p>
-          </details>
-          <details>
-            <summary>Who is this for?</summary>
-            <p>People who already pay for several AI products — developers, founders, researchers, designers and creators, consultants and agencies, product managers, and serious enthusiasts. People with one or two paid subscriptions are welcome when they are building or evaluating a stack, or contributing a useful firsthand observation.</p>
-          </details>
-          <details>
-            <summary>Do I need a large stack to belong?</summary>
-            <p>No. Subscription count is not a status tier and not an admission test. Depth of use beats a long invoice.</p>
-          </details>
-          <details>
-            <summary>Are you affiliated with any AI company?</summary>
-            <p>No. SubsMaxxers is independent of AI vendors. We do not speak for any provider. Official documentation always outranks community conversation when they conflict, and we will say so. <span class="updated">[VERIFY: restate if any disclosed commercial relationship is later approved.]</span></p>
-          </details>
-          <details>
-            <summary>What is the Reset Board?</summary>
-            <p>A structured, external reference for reset and limit intelligence. Chat is where discussion happens. The Reset Board is where dated, labeled, sourced observations live so they can be updated instead of buried. Host and public URL: <span class="updated">[VERIFY]</span>.</p>
-          </details>
-          <details>
-            <summary>How do you verify information?</summary>
-            <p>Reports need provider, product, plan, region or account context, date, and a source. Moderators apply one of five labels: OFFICIAL, CONFIRMED, REPORTED, DISPUTED, OUTDATED. One screenshot is a report, not a rule. Conflicting observations are investigated for plan, region, model, interface, and date differences before anyone is treated as wrong.</p>
-          </details>
-          <details>
-            <summary>Can I share my screen, billing page, or account ID?</summary>
-            <p>Only if you redact first. Strip email addresses, names, account IDs, payment details, invoice numbers, private workspace names, API keys, organization identifiers, and confidential prompts or documents. Unredacted billing or account screenshots will be removed. If you expose a credential, tell a moderator immediately.</p>
-          </details>
-          <details>
-            <summary>Are affiliate links, referrals, or vendor posts allowed?</summary>
-            <p>Not as drive-by promotion. Disclose any vendor, employee, investor, affiliate, or referral relationship before you post. Use the designated process in the rules. Undisclosed commercial posts are removed. The community is not a sales funnel.</p>
-          </details>
-          <details>
-            <summary>Is account sharing, login rental, or “how do I get around the cap?” allowed?</summary>
-            <p>No. Credential sharing, shared logins, resale or rental, access requests, limit-bypass techniques, trial abuse, payment fraud, and safeguard evasion are prohibited. Asking for those things is enough to be removed.</p>
-          </details>
-          <details>
-            <summary>Will there be a SubsMaxxers product?</summary>
-            <p>Possibly, later. The community has to be useful on its own. Membership will never require a product. Research participation is opt-in. Private messages are not research data. Moderators are not sales staff.</p>
-          </details>
-          <details>
-            <summary>How do I join, and what will you email me?</summary>
-            <p>The Discord community is not open yet. If you want the weekly Reset and Limits Digest, use the form on this page. Defaults are quiet. You choose extra alerts. We will not sell the list.</p>
-          </details>
-        </div>
-      </div>
-    </section>
+    </footer>
   </main>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div>
-        <p class="wordmark">SubsMa<span class="xx">xx</span>ers</p>
-        <p class="tagline">Get more from every AI subscription.</p>
-        <p class="fine">The community for multi-AI subscribers. Independent. Not affiliated with any AI provider.</p>
-      </div>
-      <div>
-        <nav class="footer-nav" aria-label="Footer">
-          <a href="#digest">Digest</a>
-          <a href="guidelines.html">Community guidelines</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="#independence">Independence</a>
-          <a href="#faq">FAQ</a>
-        </nav>
-        <p class="fine">Static site. No account connecting. Redact screenshots before you post. Beehiiv will be the email service provider when the Digest form is live.</p>
-      </div>
-    </div>
-  </footer>
 </body>
 </html>
