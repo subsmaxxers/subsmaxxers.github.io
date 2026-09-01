@@ -44,7 +44,7 @@ Official documentation outranks community conversation when they conflict.
 
 ## Reset Board (as of 2026-09-01)
 
-- Public board: https://subsmaxxers.com/reset.html
+- Public board: https://subsmaxxers.com/reset.html — visual live-ops board (Claude two-clock panel, Gemini 5h pie, Copilot 1st-of-month UTC, Cursor billing cycle). Five Official rows.
 - Claude Official: session usage on Pro / Max / Team resets every five hours. A separate weekly usage limit resets at a fixed time assigned to each account (Settings > Usage). Message counts are not a published number.
 - Do not invent clocks, prompt counts, or example rows. Official provider docs outrank this board.
 
