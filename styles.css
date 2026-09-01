@@ -172,6 +172,8 @@ a:visited { color: var(--copper); }
   cursor: pointer;
 }
 .btn:hover { background: #8F4A1A; border-color: #8F4A1A; }
+a.btn { text-decoration: none; display: inline-block; }
+#join { margin-bottom: 1.75rem; }
 
 .fine {
   font-size: 0.82rem;
