@@ -281,3 +281,158 @@ body.inner a:visited { color: var(--teal); }
 }
 .footer-nav { display: flex; gap: 1rem; }
 .footer-inner .tagline { color: var(--graphite); margin: 0.3rem 0 0; }
+
+/* Reset Board (public) — extends home tokens, does not restyle inner pages */
+.reset-page {
+  align-items: flex-start;
+  padding-top: 2.25rem;
+}
+.reset-page .sheet {
+  width: min(44rem, 100%);
+}
+.reset-page .lede {
+  margin-bottom: 1rem;
+}
+.reset-page .independence {
+  margin: 0 0 1.35rem;
+  padding: 0.75rem 0 0.85rem;
+  border-top: 1px solid color-mix(in srgb, var(--bone) 12%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--bone) 12%, transparent);
+  color: color-mix(in srgb, var(--bone) 78%, var(--mist));
+  font-size: 0.95rem;
+}
+.reset-page .independence strong { color: var(--bone); font-weight: 500; }
+
+.reset-page .legend {
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+.reset-page .legend li {
+  display: flex;
+  gap: 0.65rem;
+  align-items: baseline;
+  padding: 0.28rem 0;
+  font-size: 0.92rem;
+  color: color-mix(in srgb, var(--bone) 78%, var(--mist));
+}
+.reset-page .badge {
+  flex: 0 0 7.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.reset-page .badge-official { color: var(--teal); }
+.reset-page .badge-confirmed { color: color-mix(in srgb, var(--teal) 55%, var(--bone)); }
+.reset-page .badge-reported { color: var(--copper); }
+.reset-page .badge-disputed { color: color-mix(in srgb, var(--copper) 70%, var(--bone)); }
+.reset-page .badge-outdated { color: color-mix(in srgb, var(--bone) 45%, var(--graphite)); }
+
+.reset-page .board-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin: 0 0 0.65rem;
+}
+.reset-page .board-head h2 {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: color-mix(in srgb, var(--bone) 55%, var(--teal));
+  margin: 0;
+}
+.reset-page .board-count {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: color-mix(in srgb, var(--bone) 48%, var(--graphite));
+  margin: 0;
+}
+
+.reset-page .reset-empty {
+  margin: 0 0 1.5rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid color-mix(in srgb, var(--bone) 12%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--bone) 12%, transparent);
+  color: color-mix(in srgb, var(--bone) 78%, var(--mist));
+}
+
+.reset-page .reset-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 0 0.5rem;
+}
+.reset-page .reset-card {
+  padding: 0.95rem 0 1.05rem;
+  border-top: 1px solid color-mix(in srgb, var(--bone) 12%, transparent);
+}
+.reset-page .reset-card:last-child {
+  border-bottom: 1px solid color-mix(in srgb, var(--bone) 12%, transparent);
+}
+.reset-page .reset-card-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 0.75rem;
+  margin: 0 0 0.45rem;
+}
+.reset-page .reset-card h3 {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin: 0;
+  color: var(--bone);
+  flex: 1 1 16rem;
+}
+.reset-page .reset-card .badge { flex-basis: auto; }
+
+.reset-page .reset-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.35rem 1rem;
+  margin: 0 0 0.7rem;
+}
+.reset-page .reset-meta div { min-width: 0; }
+.reset-page .reset-meta dt {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--bone) 48%, var(--teal));
+  margin: 0;
+}
+.reset-page .reset-meta dd {
+  margin: 0.1rem 0 0;
+  color: color-mix(in srgb, var(--bone) 88%, var(--mist));
+  font-size: 0.95rem;
+}
+.reset-page .reset-fact {
+  margin: 0 0 0.55rem;
+  color: var(--bone);
+}
+.reset-page .reset-quote {
+  margin: 0;
+  padding: 0.55rem 0 0 0.85rem;
+  border-left: 2px solid var(--copper);
+  color: color-mix(in srgb, var(--bone) 78%, var(--mist));
+  font-size: 0.95rem;
+}
+.reset-page .reset-quote p { margin: 0 0 0.35rem; }
+.reset-page .reset-quote footer {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: color-mix(in srgb, var(--bone) 50%, var(--graphite));
+}
+.reset-page .reset-quote footer a { color: var(--copper); }
+
+@media (max-width: 36rem) {
+  .reset-page .reset-meta { grid-template-columns: 1fr; }
+}
+
+.reset-page .foot { margin-top: 2rem; }

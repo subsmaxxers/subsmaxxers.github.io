@@ -2,4 +2,4 @@
 
 Public landing for [subsmaxxers.com](https://subsmaxxers.com).
 
-GitHub Pages site. No Discord invite on this page until the owner publishes one.
+GitHub Pages site. Join Discord is on the homepage. Reset Board is /reset.html. Screening is manual. Discovery is off.
