@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "board_name": "SubsMaxxers Reset Board",
   "tagline": "Get more from every AI subscription.",
-  "generated_at": "2026-09-01",
+  "generated_at": "2026-09-03",
   "timezone_default": "America/Los_Angeles",
   "public_display_rule": "Every public reference must show Plan, Region, Verification status, Source, and Last verified date.",
   "disclaimer": "SubsMaxxers is independent and is not affiliated with OpenAI, Anthropic, Google, Microsoft, xAI, or any other AI provider. We do not speak for vendors. Official documentation outranks this board when they conflict. Limits can vary by plan, account, region, demand, model, feature, interface, and provider experimentation. An observation is not a universal rule. Rows with example=true are placeholders and must not be quoted as policy.",
@@ -23,7 +23,7 @@
       },
       "screenshot_redaction_status": "not_applicable",
       "first_reported_date": "2026-09-01",
-      "last_verified_date": "2026-09-01",
+      "last_verified_date": "2026-09-03",
       "verification_status": "OFFICIAL",
       "moderator_responsible": "subsmaxxers-ops",
       "discord_thread_url": "",
@@ -43,7 +43,7 @@
       "official_source": {
         "url": "https://support.claude.com/en/articles/8325606-what-is-the-pro-plan",
         "title": "What is the Pro plan? — Anthropic Help Center",
-        "retrieved_date": "2026-09-01",
+        "retrieved_date": "2026-09-03",
         "quote": "Your session-based usage limit will reset every five hours."
       },
       "source_display": "Anthropic Help Center, Pro plan, retrieved 2026-09-01",
@@ -64,7 +64,7 @@
       },
       "screenshot_redaction_status": "not_applicable",
       "first_reported_date": "2026-09-01",
-      "last_verified_date": "2026-09-01",
+      "last_verified_date": "2026-09-03",
       "verification_status": "OFFICIAL",
       "moderator_responsible": "subsmaxxers-ops",
       "discord_thread_url": "",
@@ -84,7 +84,7 @@
       "official_source": {
         "url": "https://support.claude.com/en/articles/8325606-what-is-the-pro-plan",
         "title": "What is the Pro plan? — Anthropic Help Center",
-        "retrieved_date": "2026-09-01",
+        "retrieved_date": "2026-09-03",
         "quote": "Pro plans also have a weekly usage limit that applies across all models. Weekly limits reset at a fixed time each week that is assigned to your account. Your reset day and time stay the same regardless of when you start using Claude or when your subscription begins, and you receive your full weekly allowance each cycle. You can see your next reset time in Settings > Usage."
       },
       "source_display": "Anthropic Help Center, Pro plan, retrieved 2026-09-01",
@@ -105,7 +105,7 @@
       },
       "screenshot_redaction_status": "not_applicable",
       "first_reported_date": "2026-09-01",
-      "last_verified_date": "2026-09-01",
+      "last_verified_date": "2026-09-03",
       "verification_status": "OFFICIAL",
       "moderator_responsible": "subsmaxxers-ops",
       "discord_thread_url": "",
@@ -125,7 +125,7 @@
       "official_source": {
         "url": "https://support.google.com/gemini/answer/16275805",
         "title": "Gemini Apps limits & upgrades for Google AI subscribers — Gemini Apps Help",
-        "retrieved_date": "2026-09-01",
+        "retrieved_date": "2026-09-03",
         "quote": "Your limit refreshes every 5 hours until you reach your weekly limit."
       },
       "source_display": "Gemini Apps Help, limits & upgrades, retrieved 2026-09-01",
@@ -146,7 +146,7 @@
       },
       "screenshot_redaction_status": "not_applicable",
       "first_reported_date": "2026-09-01",
-      "last_verified_date": "2026-09-01",
+      "last_verified_date": "2026-09-03",
       "verification_status": "OFFICIAL",
       "moderator_responsible": "subsmaxxers-ops",
       "discord_thread_url": "",
@@ -166,7 +166,7 @@
       "official_source": {
         "url": "https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals",
         "title": "Usage-based billing for individuals — GitHub Docs",
-        "retrieved_date": "2026-09-01",
+        "retrieved_date": "2026-09-03",
         "quote": "Included AI credits do not carry over between months. Unused credits are forfeited, and your allowance resets to the full monthly amount at 00:00:00 UTC on the first day of each calendar month. This reset date is fixed and does not change based on your subscription billing date."
       },
       "source_display": "GitHub Docs, usage-based billing for individuals, retrieved 2026-09-01",
@@ -187,7 +187,7 @@
       },
       "screenshot_redaction_status": "not_applicable",
       "first_reported_date": "2026-09-01",
-      "last_verified_date": "2026-09-01",
+      "last_verified_date": "2026-09-03",
       "verification_status": "OFFICIAL",
       "moderator_responsible": "subsmaxxers-ops",
       "discord_thread_url": "",
@@ -207,7 +207,7 @@
       "official_source": {
         "url": "https://cursor.com/help/models-and-usage/usage-limits",
         "title": "Usage and limits — Cursor Help",
-        "retrieved_date": "2026-09-01",
+        "retrieved_date": "2026-09-03",
         "quote": "Usage resets monthly with your billing cycle. Unused usage does not roll over. The reset date is shown on the Spending tab."
       },
       "source_display": "Cursor Help, usage and limits, retrieved 2026-09-01",
