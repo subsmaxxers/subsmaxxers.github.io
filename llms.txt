@@ -27,7 +27,7 @@ Official documentation outranks community conversation when they conflict.
 - Not a way to sign up with GitHub. GitHub only hosts this static site.
 - Membership is not a product purchase. A future product, if any, is optional.
 
-## Status (as of 2026-09-01)
+## Status (as of 2026-09-03)
 
 - Primary home is Discord. Public invite: https://discord.gg/ukphmsbEjg (screening is manual; Server Discovery is off).
 - The public site is https://subsmaxxers.com
@@ -42,7 +42,7 @@ Official documentation outranks community conversation when they conflict.
 - https://subsmaxxers.com/guidelines.html
 - https://subsmaxxers.com/llms.txt
 
-## Reset Board (as of 2026-09-01)
+## Reset Board (as of 2026-09-03)
 
 - Public board: https://subsmaxxers.com/reset.html — visual live-ops board (Claude two-clock panel, Gemini 5h pie, Copilot 1st-of-month UTC, Cursor billing cycle). Five Official rows.
 - Claude Official: session usage on Pro / Max / Team resets every five hours. A separate weekly usage limit resets at a fixed time assigned to each account (Settings > Usage). Message counts are not a published number.
