@@ -42,9 +42,12 @@
         <span aria-hidden="true">·</span>
         <time datetime="2026-09-03" id="board-date">2026-09-03</time>
         <span aria-hidden="true">·</span>
-        <span id="board-count">5 OFFICIAL</span>
+        <span id="board-count">6 OFFICIAL</span>
       </p>
-      <a class="reset-home" href="/">← Home</a>
+      <nav class="reset-top-nav">
+        <a class="reset-home" href="next.html">Next resets</a>
+        <a class="reset-home" href="/">← Home</a>
+      </nav>
     </div>
   </header>
 
@@ -53,6 +56,22 @@
       <h1 class="wordmark">SubsMa<span class="xx">xx</span>ers</h1>
       <p class="one-line">Official reset clocks. We do not invent numbers.</p>
     </div>
+
+    <div id="change-banner" class="change-banner" hidden></div>
+    <p id="stack-live" class="stack-live" aria-live="polite"></p>
+
+    <section class="stack-strip" aria-label="My stack">
+      <div class="stack-strip-head">
+        <h2>My stack</h2>
+        <p>Toggle what you pay for. Saved in this browser only. No OAuth.</p>
+      </div>
+      <div id="stack-toggles" class="stack-toggles"></div>
+      <label class="stack-notify-row">
+        <input type="checkbox" id="stack-notify">
+        Optional browser notifications for 5-hour sessions
+      </label>
+      <p class="tool-fine">Local countdown starts when you press Session started. Claude weekly, Grok weekly, and Cursor need a time you paste from Settings or Spending. <a class="stack-next-link" href="next.html">One-screen next →</a></p>
+    </section>
 
     <ul class="legend" aria-label="Verification labels">
       <li><span class="badge badge-official">OFFICIAL</span> stated</li>
@@ -233,19 +252,63 @@
           </div>
         </article>
 
+        <article class="board-panel" data-provider="Grok">
+          <header class="panel-head">
+            <span class="tile tile-gk" aria-hidden="true">GK</span>
+            <div class="panel-id">
+              <h3>Grok</h3>
+              <p class="panel-plan">SuperGrok</p>
+            </div>
+            <div class="panel-meta">
+              <span class="badge badge-official">OFFICIAL</span>
+              <time datetime="2026-09-03">2026-09-03</time>
+            </div>
+          </header>
+          <div class="clock-row">
+            <div class="clock-cell" id="r-grok-supergrok-weekly-pool-2026-09-03" data-id="r-grok-supergrok-weekly-pool-2026-09-03">
+              <p class="clock-kicker kicker-teal">WEEKLY</p>
+              <svg viewBox="0 0 120 120" class="clock-svg" aria-hidden="true">
+  <circle cx="60" cy="50" r="38" fill="none" stroke="#1A6B63" stroke-width="2.2" opacity="0.5"/>
+  <circle cx="60.00" cy="16.00" r="5" fill="#1A6B63"/>
+  <circle cx="86.58" cy="28.80" r="5" fill="#1A6B63"/>
+  <circle cx="93.15" cy="57.57" r="5" fill="#1A6B63"/>
+  <circle cx="74.75" cy="80.63" r="12" fill="none" stroke="#1A6B63" stroke-width="2.2"/>
+  <circle cx="74.75" cy="80.63" r="7" fill="#1A6B63"/>
+  <circle cx="45.25" cy="80.63" r="5" fill="#1A6B63"/>
+  <circle cx="26.85" cy="57.57" r="5" fill="#1A6B63"/>
+  <circle cx="33.42" cy="28.80" r="5" fill="#1A6B63"/>
+  <text x="75" y="112" text-anchor="middle" fill="#1A6B63" font-size="10" font-family="IBM Plex Sans, sans-serif">weekly</text>
+</svg>
+              <p class="clock-label">schedule (Settings → Usage)</p>
+              <a class="clock-source" href="https://docs.x.ai/grok/faq">source</a>
+              <details class="clock-quote">
+                <summary>quote</summary>
+                <blockquote>
+                  <p>“The usage pool limit resets every week on a schedule shown in the Usage tab in Settings.”</p>
+                  <footer>— <a href="https://docs.x.ai/grok/faq">FAQ - Grok Website / Apps — xAI Docs</a>, retrieved 2026-09-03</footer>
+                </blockquote>
+              </details>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
+
+    <section id="playbook" class="playbook" hidden></section>
 
     <footer class="foot">
       <span>Independent, not affiliated with any AI provider; official docs outrank this board.</span>
       <nav>
         <a href="/">Homepage</a>
+        <a href="next.html">Next resets</a>
         <a href="privacy.html">Privacy</a>
         <a href="guidelines.html">Rules</a>
       </nav>
     </footer>
   </main>
 
+  <script src="stack.js"></script>
   <script>
     (function () {
       var emptyEl = document.getElementById("board-empty");
@@ -253,11 +316,19 @@
       var countEl = document.getElementById("board-count");
       var dateEl = document.getElementById("board-date");
 
+      function bootStack(generatedAt) {
+        if (window.SubsMaxxersStack) {
+          SubsMaxxersStack.initResetPage({ generatedAt: generatedAt || (dateEl && dateEl.textContent) || "" });
+        }
+      }
+      bootStack(dateEl && dateEl.textContent);
+
       var GRAPHICS = {
         session5: "<svg viewBox=\"0 0 120 120\" class=\"clock-svg\" aria-hidden=\"true\"><path fill=\"#C56A27\" d=\"M63.49,10.12 A50,50 0 0 1 106.36,41.27 L80.40,51.76 A22,22 0 0 0 61.53,38.05 Z\"/><path fill=\"#C56A27\" d=\"M108.51,47.90 A50,50 0 0 1 92.14,98.30 L74.14,76.85 A22,22 0 0 0 81.35,54.68 Z\"/><path fill=\"#C56A27\" d=\"M86.50,102.40 A50,50 0 0 1 33.50,102.40 L48.34,78.66 A22,22 0 0 0 71.66,78.66 Z\"/><path fill=\"#C56A27\" d=\"M27.86,98.30 A50,50 0 0 1 11.49,47.90 L38.65,54.68 A22,22 0 0 0 45.86,76.85 Z\"/><path fill=\"#C56A27\" d=\"M13.64,41.27 A50,50 0 0 1 56.51,10.12 L58.47,38.05 A22,22 0 0 0 39.60,51.76 Z\"/><circle cx=\"60\" cy=\"60\" r=\"17\" fill=\"none\" stroke=\"#C56A27\" stroke-width=\"1.6\" opacity=\"0.7\"/></svg>",
         weekly7: "<svg viewBox=\"0 0 120 120\" class=\"clock-svg\" aria-hidden=\"true\"><circle cx=\"60\" cy=\"50\" r=\"38\" fill=\"none\" stroke=\"#1A6B63\" stroke-width=\"2.2\" opacity=\"0.5\"/><circle cx=\"60.00\" cy=\"16.00\" r=\"5\" fill=\"#1A6B63\"/><circle cx=\"86.58\" cy=\"28.80\" r=\"5\" fill=\"#1A6B63\"/><circle cx=\"93.15\" cy=\"57.57\" r=\"5\" fill=\"#1A6B63\"/><circle cx=\"74.75\" cy=\"80.63\" r=\"12\" fill=\"none\" stroke=\"#1A6B63\" stroke-width=\"2.2\"/><circle cx=\"74.75\" cy=\"80.63\" r=\"7\" fill=\"#1A6B63\"/><circle cx=\"45.25\" cy=\"80.63\" r=\"5\" fill=\"#1A6B63\"/><circle cx=\"26.85\" cy=\"57.57\" r=\"5\" fill=\"#1A6B63\"/><circle cx=\"33.42\" cy=\"28.80\" r=\"5\" fill=\"#1A6B63\"/><text x=\"75\" y=\"112\" text-anchor=\"middle\" fill=\"#1A6B63\" font-size=\"10\" font-family=\"IBM Plex Sans, sans-serif\">assigned</text></svg>",
         calendar1: "<svg viewBox=\"0 0 100 118\" class=\"clock-svg clock-cal\" aria-hidden=\"true\"><rect x=\"16\" y=\"18\" width=\"68\" height=\"84\" rx=\"7\" fill=\"#1C2128\" stroke=\"#C56A27\" stroke-width=\"2.4\"/><path d=\"M16 25 a7 7 0 0 1 7-7 h54 a7 7 0 0 1 7 7 v16 H16 Z\" fill=\"#C56A27\"/><circle cx=\"30\" cy=\"27\" r=\"2.2\" fill=\"#12161C\"/><circle cx=\"50\" cy=\"27\" r=\"2.2\" fill=\"#12161C\"/><circle cx=\"70\" cy=\"27\" r=\"2.2\" fill=\"#12161C\"/><text x=\"50\" y=\"78\" text-anchor=\"middle\" fill=\"#F3EEE4\" font-size=\"34\" font-weight=\"500\" font-family=\"IBM Plex Sans, sans-serif\">1</text><text x=\"50\" y=\"94\" text-anchor=\"middle\" fill=\"#C56A27\" font-size=\"8.5\" font-family=\"IBM Plex Mono, monospace\">00:00 UTC</text></svg>",
-        cycle: "<svg viewBox=\"0 0 120 120\" class=\"clock-svg\" aria-hidden=\"true\"><circle cx=\"60\" cy=\"58\" r=\"36\" fill=\"none\" stroke=\"#3D424A\" stroke-width=\"2.2\"/><path d=\"M80.6,28.5 A36,36 0 1 1 30.5,37.4\" fill=\"none\" stroke=\"#C56A27\" stroke-width=\"7\" stroke-linecap=\"round\"/><polygon points=\"36.2,29.2 33.7,43.3 23.9,36.4\" fill=\"#C56A27\"/></svg>"
+        cycle: "<svg viewBox=\"0 0 120 120\" class=\"clock-svg\" aria-hidden=\"true\"><circle cx=\"60\" cy=\"58\" r=\"36\" fill=\"none\" stroke=\"#3D424A\" stroke-width=\"2.2\"/><path d=\"M80.6,28.5 A36,36 0 1 1 30.5,37.4\" fill=\"none\" stroke=\"#C56A27\" stroke-width=\"7\" stroke-linecap=\"round\"/><polygon points=\"36.2,29.2 33.7,43.3 23.9,36.4\" fill=\"#C56A27\"/></svg>",
+        weeklyPool: "<svg viewBox=\"0 0 120 120\" class=\"clock-svg\" aria-hidden=\"true\"><circle cx=\"60\" cy=\"50\" r=\"38\" fill=\"none\" stroke=\"#1A6B63\" stroke-width=\"2.2\" opacity=\"0.5\"/><circle cx=\"60.00\" cy=\"16.00\" r=\"5\" fill=\"#1A6B63\"/><circle cx=\"86.58\" cy=\"28.80\" r=\"5\" fill=\"#1A6B63\"/><circle cx=\"93.15\" cy=\"57.57\" r=\"5\" fill=\"#1A6B63\"/><circle cx=\"74.75\" cy=\"80.63\" r=\"12\" fill=\"none\" stroke=\"#1A6B63\" stroke-width=\"2.2\"/><circle cx=\"74.75\" cy=\"80.63\" r=\"7\" fill=\"#1A6B63\"/><circle cx=\"45.25\" cy=\"80.63\" r=\"5\" fill=\"#1A6B63\"/><circle cx=\"26.85\" cy=\"57.57\" r=\"5\" fill=\"#1A6B63\"/><circle cx=\"33.42\" cy=\"28.80\" r=\"5\" fill=\"#1A6B63\"/><text x=\"75\" y=\"112\" text-anchor=\"middle\" fill=\"#1A6B63\" font-size=\"10\" font-family=\"IBM Plex Sans, sans-serif\">weekly</text></svg>"
       };
 
       var PANELS = [
@@ -304,6 +375,17 @@
           hero: false,
           clocks: [
             { id: "r-cursor-billing-cycle-monthly-2026-09-01", graphic: "cycle", kicker: "CYCLE", kickerClass: "", label: "billing cycle (no leftover)" }
+          ]
+        },
+        {
+          key: "grok",
+          letter: "GK",
+          tile: "tile-gk",
+          name: "Grok",
+          planShort: "SuperGrok",
+          hero: false,
+          clocks: [
+            { id: "r-grok-supergrok-weekly-pool-2026-09-03", graphic: "weeklyPool", kicker: "WEEKLY", kickerClass: "kicker-teal", label: "schedule (Settings → Usage)" }
           ]
         }
       ];
@@ -397,6 +479,7 @@
             listEl.hidden = true;
             emptyEl.hidden = false;
             countEl.textContent = "0 OFFICIAL";
+            bootStack(data.generated_at || dateEl.textContent);
             return;
           }
           var byId = {};
@@ -407,6 +490,7 @@
             listEl.hidden = true;
             emptyEl.hidden = false;
             countEl.textContent = "0 OFFICIAL";
+            bootStack(data.generated_at || dateEl.textContent);
             return;
           }
           emptyEl.hidden = true;
@@ -417,9 +501,11 @@
             dateEl.setAttribute("datetime", data.generated_at);
             dateEl.textContent = data.generated_at;
           }
+          bootStack(data.generated_at || dateEl.textContent);
         })
         .catch(function () {
           /* Keep the static HTML fallback. */
+          bootStack(dateEl.textContent);
         });
     })();
   </script>

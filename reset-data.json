@@ -7,7 +7,7 @@
   "public_display_rule": "Every public reference must show Plan, Region, Verification status, Source, and Last verified date.",
   "disclaimer": "SubsMaxxers is independent and is not affiliated with OpenAI, Anthropic, Google, Microsoft, xAI, or any other AI provider. We do not speak for vendors. Official documentation outranks this board when they conflict. Limits can vary by plan, account, region, demand, model, feature, interface, and provider experimentation. An observation is not a universal rule. Rows with example=true are placeholders and must not be quoted as policy.",
   "filter": "example=false AND reset_kind is not unknown AND a named plan exists. Example rows and the Tibo Codex hint are excluded.",
-  "report_count": 5,
+  "report_count": 6,
   "reports": [
     {
       "example": false,
@@ -46,7 +46,7 @@
         "retrieved_date": "2026-09-03",
         "quote": "Your session-based usage limit will reset every five hours."
       },
-      "source_display": "Anthropic Help Center, Pro plan, retrieved 2026-09-01",
+      "source_display": "Anthropic Help Center, Pro plan, retrieved 2026-09-03",
       "notes": "OFFICIAL documentation row. One cap: the five-hour session window. Weekly assigned time is a separate row. Max plan article retrieved 2026-09-01 (https://support.claude.com/en/articles/11049741-what-is-the-max-plan) repeats the same session sentence. Team plan article retrieved 2026-09-01 (https://support.claude.com/en/articles/9266767-what-is-the-team-plan) describes usage per five-hour session with Standard 1.25× Pro and Premium 6.25× Pro; weekly language matches Pro/Max. Do not quote third-party prompt counts. Do not invent a message number. account_type is other because this row covers individual Pro/Max and Team seats together (same session clock).",
       "reset_fact": "Session-based usage limit resets every five hours."
     },
@@ -87,7 +87,7 @@
         "retrieved_date": "2026-09-03",
         "quote": "Pro plans also have a weekly usage limit that applies across all models. Weekly limits reset at a fixed time each week that is assigned to your account. Your reset day and time stay the same regardless of when you start using Claude or when your subscription begins, and you receive your full weekly allowance each cycle. You can see your next reset time in Settings > Usage."
       },
-      "source_display": "Anthropic Help Center, Pro plan, retrieved 2026-09-01",
+      "source_display": "Anthropic Help Center, Pro plan, retrieved 2026-09-03",
       "notes": "OFFICIAL documentation row. One cap: the weekly assigned-time limit. Five-hour session is a separate row. reset_kind is fixed (schema equivalent of assigned weekly): a fixed time each week, assigned per account, not a global weekday we can publish. Max plan article retrieved 2026-09-01 uses the same weekly assigned-time language (https://support.claude.com/en/articles/11049741-what-is-the-max-plan). Team plan article retrieved 2026-09-01 matches the weekly assigned-time language for Standard and Premium seats (https://support.claude.com/en/articles/9266767-what-is-the-team-plan). Do not quote third-party prompt counts or Sonnet-hour estimates.",
       "reset_fact": "Weekly limit resets at a fixed time assigned to your account (Settings > Usage)."
     },
@@ -128,7 +128,7 @@
         "retrieved_date": "2026-09-03",
         "quote": "Your limit refreshes every 5 hours until you reach your weekly limit."
       },
-      "source_display": "Gemini Apps Help, limits & upgrades, retrieved 2026-09-01",
+      "source_display": "Gemini Apps Help, limits & upgrades, retrieved 2026-09-03",
       "notes": "OFFICIAL documentation row from live fetch 2026-09-01. Article notes usage-limit changes starting 2026-05-17. For personal Google Accounts. A weekly limit is mentioned but its reset clock is not published on this page, so there is no separate Gemini weekly row. Do not invent a weekly weekday or a prompt count.",
       "reset_fact": "Compute limit refreshes every 5 hours until the weekly limit."
     },
@@ -169,7 +169,7 @@
         "retrieved_date": "2026-09-03",
         "quote": "Included AI credits do not carry over between months. Unused credits are forfeited, and your allowance resets to the full monthly amount at 00:00:00 UTC on the first day of each calendar month. This reset date is fixed and does not change based on your subscription billing date."
       },
-      "source_display": "GitHub Docs, usage-based billing for individuals, retrieved 2026-09-01",
+      "source_display": "GitHub Docs, usage-based billing for individuals, retrieved 2026-09-03",
       "notes": "OFFICIAL documentation row from live fetch 2026-09-01. Clock is calendar-month UTC, not the GitHub billing-cycle start. Numeric credit tables on that page can change; this row records the reset clock, not a copied credit table. Business/Enterprise seats are out of scope for this individuals article.",
       "reset_fact": "Included AI credits reset at 00:00:00 UTC on the 1st of each calendar month."
     },
@@ -210,9 +210,50 @@
         "retrieved_date": "2026-09-03",
         "quote": "Usage resets monthly with your billing cycle. Unused usage does not roll over. The reset date is shown on the Spending tab."
       },
-      "source_display": "Cursor Help, usage and limits, retrieved 2026-09-01",
+      "source_display": "Cursor Help, usage and limits, retrieved 2026-09-03",
       "notes": "OFFICIAL documentation row from live fetch 2026-09-01. No numeric allowance on this page — do not invent one. Start plan is described as covering the Cursor Models pool only; it is not given a separate clock here. For teams, the same page says all members' usage resets together on the team billing cycle. This public row is the individual Pro / Pro Plus / Ultra billing-cycle clock.",
       "reset_fact": "Usage resets monthly with the billing cycle; unused does not roll over."
+    },
+    {
+      "example": false,
+      "country_region": "Global (unspecified)",
+      "observed_allowance": "not observed",
+      "reset_date_time": "",
+      "product_displayed": "not observed",
+      "member_evidence": "None. Staff retrieved the live provider docs page. No in-product observation. No PII.",
+      "screenshot": {
+        "present": false,
+        "uri": null,
+        "description": "None. Documentation-only row; no screenshot attached."
+      },
+      "screenshot_redaction_status": "not_applicable",
+      "first_reported_date": "2026-09-03",
+      "last_verified_date": "2026-09-03",
+      "verification_status": "OFFICIAL",
+      "moderator_responsible": "subsmaxxers-ops",
+      "discord_thread_url": "",
+      "observer_count": 0,
+      "id": "r-grok-supergrok-weekly-pool-2026-09-03",
+      "title": "Grok SuperGrok — shared weekly usage pool resets on a schedule in Settings",
+      "provider": "Grok",
+      "product": "Grok (website / apps)",
+      "plan": "SuperGrok (paid Grok plans)",
+      "account_type": "individual",
+      "interface": "web",
+      "model_or_feature": "shared weekly usage pool across Chat, Imagine, Voice, Build, and API (compute-metered; not a fixed message count)",
+      "limit_type": "weekly_allowance",
+      "published_allowance": "One shared weekly usage pool across Grok products. Shown as a percentage, broken down by product. Different products cost different amounts of compute. The FAQ does not publish a numeric message count or a global weekday. Reset date and time are in Settings → Usage. Free-tier Chat and Voice limits are separate and reset on their own unpublished schedule — not a second public row.",
+      "time_zone": "unknown",
+      "reset_kind": "fixed",
+      "official_source": {
+        "url": "https://docs.x.ai/grok/faq",
+        "title": "FAQ - Grok Website / Apps — xAI Docs",
+        "retrieved_date": "2026-09-03",
+        "quote": "The usage pool limit resets every week on a schedule shown in the Usage tab in Settings."
+      },
+      "source_display": "xAI Docs, Grok FAQ, retrieved 2026-09-03",
+      "notes": "OFFICIAL documentation row from live fetch 2026-09-03. SuperGrok weekly pool only. Do not invent a weekday, timezone, or message count. Do not file a free-tier row: the FAQ says those limits reset on their own schedule but does not publish the clock. Extra Usage Credits expire one year after purchase and are not a reset clock.",
+      "reset_fact": "Shared weekly usage pool resets every week on a schedule shown in Settings → Usage."
     }
   ]
 }

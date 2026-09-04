@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Next resets — SubsMaxxers</title>
+  <meta name="description" content="One-screen TLDR of your next AI usage reset. Official clocks plus times you pasted. Nothing leaves this browser.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#12161C">
+  <link rel="canonical" href="https://subsmaxxers.com/next.html">
+  <link rel="alternate" type="text/plain" href="https://subsmaxxers.com/llms.txt" title="llms.txt">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/avatar.png" sizes="512x512" type="image/png">
+  <link rel="apple-touch-icon" href="assets/avatar.png">
+  <meta property="og:site_name" content="SubsMaxxers">
+  <meta property="og:title" content="Next resets — SubsMaxxers">
+  <meta property="og:description" content="One-screen TLDR of your next AI usage reset. Official clocks plus times you pasted.">
+  <meta property="og:url" content="https://subsmaxxers.com/next.html">
+  <meta property="og:image" content="https://subsmaxxers.com/assets/reset-board.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Next resets — SubsMaxxers">
+  <meta name="twitter:description" content="One-screen TLDR of your next AI usage reset. Official clocks plus times you pasted.">
+  <meta name="twitter:image" content="https://subsmaxxers.com/assets/reset-board.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:opsz,wght@6..72,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="reset-page next-page">
+  <a class="skip" href="#next">Skip to next resets</a>
+
+  <header class="reset-topbar">
+    <div class="reset-topbar-inner">
+      <p class="reset-status">
+        <span>NEXT RESETS</span>
+        <span class="dot-live" aria-hidden="true"></span>
+        <span class="live-word">LOCAL</span>
+        <span aria-hidden="true">·</span>
+        <span>your stack</span>
+      </p>
+      <a class="reset-home" href="reset.html">← Reset Board</a>
+    </div>
+  </header>
+
+  <main class="board-wrap" id="next">
+    <div class="reset-ident">
+      <h1 class="wordmark">SubsMa<span class="xx">xx</span>ers</h1>
+      <p class="one-line">Next window per tool you enabled. Official clocks and times you pasted. Nothing leaves this browser.</p>
+    </div>
+
+    <div id="next-list-host"></div>
+
+    <p class="next-fine">We do not invent numbers. Copilot uses the Official 1st-of-month UTC clock. Claude weekly, Grok weekly, and Cursor need a time you copy from Settings or Spending. 5-hour sessions count down only after you press Session started.</p>
+
+    <footer class="foot">
+      <span>Independent, not affiliated with any AI provider; official docs outrank this board.</span>
+      <nav>
+        <a href="/">Homepage</a>
+        <a href="reset.html">Reset Board</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="guidelines.html">Rules</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="stack.js"></script>
+  <script>
+    if (window.SubsMaxxersStack) SubsMaxxersStack.initNextPage();
+  </script>
+</body>
+</html>
