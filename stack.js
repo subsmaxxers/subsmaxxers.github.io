@@ -526,6 +526,16 @@
     }
   }
 
+  function ensureInStack(provider) {
+    if (!provider) return;
+    var cur = loadStack();
+    if (cur.indexOf(provider) !== -1) return;
+    cur.push(provider);
+    saveStack(cur);
+    renderStackToggles(document.getElementById("stack-toggles"));
+    syncPanelStack(cur);
+  }
+
   function renderStackToggles(host) {
     if (!host) return;
     host.innerHTML = "";
@@ -592,6 +602,15 @@
     return wrap;
   }
 
+  function appendTools(cell, wrap) {
+    var hero = cell.querySelector(".row-hero");
+    if (hero && hero.parentNode) {
+      hero.parentNode.insertBefore(wrap, hero.nextSibling);
+    } else {
+      cell.appendChild(wrap);
+    }
+  }
+
   function mountSessionTools(cell, provider) {
     if (cell.querySelector("[data-stack-tools]")) return;
     var wrap = toolShell();
@@ -602,6 +621,7 @@
     startBtn.setAttribute("data-session-start", provider);
     var clearBtn = el("button", "tool-btn tool-btn-quiet", { type: "button", text: "Clear" });
     startBtn.addEventListener("click", function () {
+      ensureInStack(provider);
       var t = loadTimers();
       t.sessionStart[provider] = new Date().toISOString();
       saveTimers(t);
@@ -623,7 +643,7 @@
     wrap.appendChild(count);
     wrap.appendChild(actions);
     wrap.appendChild(el("p", "tool-fine", { text: "Start when you begin a session. Stays on this device. Not a live vendor meter." }));
-    cell.appendChild(wrap);
+    appendTools(cell, wrap);
   }
 
   function mountWeeklyTools(cell, provider) {
@@ -641,6 +661,7 @@
     var icsBefore = el("button", "tool-btn tool-btn-quiet", { type: "button", text: ".ics 30 min before" });
     var icsAt = el("button", "tool-btn tool-btn-quiet", { type: "button", text: ".ics at reset" });
     saveBtn.addEventListener("click", function () {
+      ensureInStack(provider);
       var t = loadTimers();
       t.weekly[provider] = fromDatetimeLocal(input.value);
       saveTimers(t);
@@ -684,7 +705,7 @@
     wrap.appendChild(label);
     wrap.appendChild(actions);
     wrap.appendChild(el("p", "tool-fine", { text: "We do not invent a weekday. Paste what Settings → Usage shows." }));
-    cell.appendChild(wrap);
+    appendTools(cell, wrap);
   }
 
   function mountCopilotTools(cell) {
@@ -693,6 +714,7 @@
     var actions = el("div", "tool-actions");
     var btn = el("button", "tool-btn", { type: "button", text: "Download monthly .ics" });
     btn.addEventListener("click", function () {
+      ensureInStack("copilot");
       var start = nextCopilotReset(new Date());
       downloadIcs(
         "copilot-monthly-reset.ics",
@@ -709,7 +731,7 @@
     wrap.appendChild(el("p", "tool-kicker", { text: "Official calendar clock" }));
     wrap.appendChild(el("p", "tool-fine", { text: "Repeats 00:00:00 UTC on the 1st. No credit amounts." }));
     wrap.appendChild(actions);
-    cell.appendChild(wrap);
+    appendTools(cell, wrap);
   }
 
   function mountCursorTools(cell) {
@@ -726,6 +748,7 @@
     var saveBtn = el("button", "tool-btn", { type: "button", text: "Save locally" });
     var icsBtn = el("button", "tool-btn tool-btn-quiet", { type: "button", text: ".ics at reset" });
     saveBtn.addEventListener("click", function () {
+      ensureInStack("cursor");
       var t = loadTimers();
       t.cursorReset = fromDatetimeLocal(input.value);
       saveTimers(t);
@@ -750,7 +773,7 @@
     wrap.appendChild(label);
     wrap.appendChild(actions);
     wrap.appendChild(el("p", "tool-fine", { text: "We do not invent this date. Copy it from Cursor → Spending." }));
-    cell.appendChild(wrap);
+    appendTools(cell, wrap);
   }
 
   function mountAllTools() {

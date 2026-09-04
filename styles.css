@@ -797,14 +797,16 @@ body.inner a:visited { color: var(--teal); }
   text-decoration: none;
 }
 
-.reset-row:not(.in-stack) .clock-tools { display: none; }
-.board-panel:not(.in-stack) .clock-tools { display: none; }
+.reset-row.in-stack {
+  outline: 1px solid color-mix(in srgb, var(--teal) 35%, transparent);
+}
 
 .clock-tools {
   width: 100%;
   margin: 0;
   padding: 0.55rem 0.75rem 0.7rem;
-  border-top: 1px solid color-mix(in srgb, var(--bone) 10%, transparent);
+  border-top: 1px solid color-mix(in srgb, var(--copper) 28%, transparent);
+  background: color-mix(in srgb, var(--copper) 8%, transparent);
   text-align: left;
 }
 .tool-kicker {
