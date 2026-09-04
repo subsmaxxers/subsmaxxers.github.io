@@ -128,6 +128,51 @@
     return h + ":" + pad(m) + ":" + pad(s);
   }
 
+  function formatRemaining(ms) {
+    if (ms < 0) ms = 0;
+    var totalSec = Math.floor(ms / 1000);
+    var days = Math.floor(totalSec / 86400);
+    if (days >= 1) {
+      var rem = totalSec - days * 86400;
+      var h = Math.floor(rem / 3600);
+      rem -= h * 3600;
+      var m = Math.floor(rem / 60);
+      return days + "d " + h + "h " + m + "m";
+    }
+    return formatHMS(ms);
+  }
+
+  var WEEK_MS = 7 * 24 * 60 * 60 * 1000;
+  var CYCLE_DISPLAY_MS = 30 * 24 * 60 * 60 * 1000;
+
+  function clampRatio(r) {
+    if (r < 0) return 0;
+    if (r > 1) return 1;
+    return r;
+  }
+
+  function setRowTimerUI(id, opts) {
+    opts = opts || {};
+    var countEl = document.querySelector('[data-row-countdown="' + id + '"]');
+    var fillEl = document.querySelector('[data-row-progress-fill="' + id + '"]');
+    var barEl = document.querySelector('[data-row-progress="' + id + '"]');
+    var hintEl = document.querySelector('[data-row-hint="' + id + '"]');
+    if (countEl) countEl.textContent = opts.countdown != null ? opts.countdown : "—:—:—";
+    var pct = Math.round(clampRatio(opts.ratio || 0) * 100);
+    if (fillEl) fillEl.style.width = pct + "%";
+    if (barEl) barEl.setAttribute("aria-valuenow", String(pct));
+    if (hintEl) hintEl.textContent = opts.hint != null ? opts.hint : "";
+  }
+
+  function copilotWindow(now) {
+    now = now || new Date();
+    var end = nextCopilotReset(now);
+    var y = end.getUTCFullYear();
+    var m = end.getUTCMonth();
+    var start = new Date(Date.UTC(y, m - 1, 1, 0, 0, 0));
+    return { start: start, end: end };
+  }
+
   function formatLocal(d) {
     if (!d || isNaN(d.getTime())) return "";
     try {
@@ -474,10 +519,10 @@
   }
 
   function syncPanelStack(stack) {
-    var panels = document.querySelectorAll(".board-panel");
-    for (var i = 0; i < panels.length; i++) {
-      var name = (panels[i].getAttribute("data-provider") || "").toLowerCase();
-      panels[i].classList.toggle("in-stack", stack.indexOf(name) !== -1);
+    var rows = document.querySelectorAll(".reset-row[data-provider], .board-panel[data-provider]");
+    for (var i = 0; i < rows.length; i++) {
+      var name = (rows[i].getAttribute("data-provider") || "").toLowerCase();
+      rows[i].classList.toggle("in-stack", stack.indexOf(name) !== -1);
     }
   }
 
@@ -709,7 +754,7 @@
   }
 
   function mountAllTools() {
-    var cells = document.querySelectorAll(".clock-cell[data-id], .clock-cell[id]");
+    var cells = document.querySelectorAll(".reset-row[data-id], .clock-cell[data-id], .clock-cell[id]");
     for (var i = 0; i < cells.length; i++) {
       var id = cells[i].getAttribute("data-id") || cells[i].id;
       var spec = CLOCK_TOOLS[id];
@@ -738,36 +783,128 @@
     var liveBits = [];
     ["claude", "gemini"].forEach(function (provider) {
       var prog = sessionProgress(timers.sessionStart[provider], now);
-      var statusEl = document.querySelector("[data-session-status=\"" + provider + "\"]");
-      var countEl = document.querySelector("[data-session-count=\"" + provider + "\"]");
-      var startBtn = document.querySelector("[data-session-start=\"" + provider + "\"]");
+      var statusEl = document.querySelector('[data-session-status="' + provider + '"]');
+      var countEl = document.querySelector('[data-session-count="' + provider + '"]');
+      var startBtn = document.querySelector('[data-session-start="' + provider + '"]');
       var events = fireSessionNotices(provider, prog, timers);
       for (var e = 0; e < events.length; e++) liveBits.push(events[e].text);
 
-      if (!statusEl || !countEl) return;
+      if (!statusEl) return;
       if (!prog) {
         statusEl.textContent = "No local session running.";
-        countEl.textContent = "";
+        if (countEl) countEl.textContent = "";
         if (startBtn) startBtn.textContent = "Session started";
         return;
       }
       if (prog.exhausted) {
         statusEl.textContent = "5-hour limit reached — resets " + formatLocal(prog.end) + ".";
-        countEl.textContent = "You're back — session has reset. Start a new session when you begin again.";
+        if (countEl) countEl.textContent = "You're back — start a new session when you begin again.";
         if (startBtn) startBtn.textContent = "Start new session";
       } else if (prog.approaching) {
-        statusEl.textContent = "Approaching 5-hour limit.";
-        countEl.textContent = formatHMS(prog.remaining) + " remaining · resets " + formatLocal(prog.end);
+        statusEl.textContent = "Approaching 5-hour limit · resets " + formatLocal(prog.end);
+        if (countEl) countEl.textContent = "";
         if (startBtn) startBtn.textContent = "Restart session";
       } else {
-        statusEl.textContent = "Session running.";
-        countEl.textContent = formatHMS(prog.remaining) + " remaining · resets " + formatLocal(prog.end);
+        statusEl.textContent = "Session running · resets " + formatLocal(prog.end);
+        if (countEl) countEl.textContent = "";
         if (startBtn) startBtn.textContent = "Restart session";
       }
     });
     if (live) {
       if (liveBits.length) live.textContent = liveBits.join(" ");
     }
+  }
+
+  function updateRowTimers(now) {
+    now = now || new Date();
+    var timers = loadTimers();
+    Object.keys(CLOCK_TOOLS).forEach(function (id) {
+      var spec = CLOCK_TOOLS[id];
+      if (!spec) return;
+
+      if (spec.kind === "session") {
+        var prog = sessionProgress(timers.sessionStart[spec.provider], now);
+        if (!prog) {
+          setRowTimerUI(id, { countdown: "—:—:—", ratio: 0, hint: "Start session" });
+          return;
+        }
+        if (prog.exhausted) {
+          setRowTimerUI(id, {
+            countdown: "0:00:00",
+            ratio: 1,
+            hint: "Session ended · start again"
+          });
+          return;
+        }
+        setRowTimerUI(id, {
+          countdown: formatRemaining(prog.remaining),
+          ratio: prog.ratio,
+          hint: prog.approaching ? "Approaching limit" : "Local 5-hour timer"
+        });
+        return;
+      }
+
+      if (spec.kind === "weekly") {
+        var endW = parseISO(timers.weekly[spec.provider]);
+        if (!endW) {
+          setRowTimerUI(id, { countdown: "—:—:—", ratio: 0, hint: "Paste reset time" });
+          return;
+        }
+        var remW = endW.getTime() - now.getTime();
+        if (remW <= 0) {
+          setRowTimerUI(id, {
+            countdown: "0:00:00",
+            ratio: 1,
+            hint: "Pasted time passed · paste next"
+          });
+          return;
+        }
+        var startW = new Date(endW.getTime() - WEEK_MS);
+        var ratioW = (now.getTime() - startW.getTime()) / WEEK_MS;
+        setRowTimerUI(id, {
+          countdown: formatRemaining(remW),
+          ratio: ratioW,
+          hint: "Resets " + formatLocal(endW)
+        });
+        return;
+      }
+
+      if (spec.kind === "cursor") {
+        var endC = parseISO(timers.cursorReset);
+        if (!endC) {
+          setRowTimerUI(id, { countdown: "—:—:—", ratio: 0, hint: "Paste reset time" });
+          return;
+        }
+        var remC = endC.getTime() - now.getTime();
+        if (remC <= 0) {
+          setRowTimerUI(id, {
+            countdown: "0:00:00",
+            ratio: 1,
+            hint: "Pasted date passed · paste next"
+          });
+          return;
+        }
+        var startC = new Date(endC.getTime() - CYCLE_DISPLAY_MS);
+        var ratioC = (now.getTime() - startC.getTime()) / CYCLE_DISPLAY_MS;
+        setRowTimerUI(id, {
+          countdown: formatRemaining(remC),
+          ratio: ratioC,
+          hint: "Resets " + formatLocal(endC)
+        });
+        return;
+      }
+
+      if (spec.kind === "copilot") {
+        var win = copilotWindow(now);
+        var remP = win.end.getTime() - now.getTime();
+        var ratioP = (now.getTime() - win.start.getTime()) / (win.end.getTime() - win.start.getTime());
+        setRowTimerUI(id, {
+          countdown: formatRemaining(remP),
+          ratio: ratioP,
+          hint: "Next 1st 00:00 UTC · " + formatLocal(win.end)
+        });
+      }
+    });
   }
 
   function updatePlaybook(now) {
@@ -807,6 +944,7 @@
     syncPanelStack(loadStack());
     fillSavedInputs();
     updateSessionUI(now);
+    updateRowTimers(now);
     updatePlaybook(now);
     var icsWeekly = document.querySelectorAll("[data-weekly-input]");
     for (var i = 0; i < icsWeekly.length; i++) {

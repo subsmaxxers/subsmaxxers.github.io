@@ -84,218 +84,203 @@
     <section id="board" aria-labelledby="board-title">
       <h2 id="board-title" class="sr">Official reset clocks</h2>
       <p class="reset-empty" id="board-empty" hidden>No live Official rows on this board yet. Official documentation still outranks us. This should not happen on launch — if you see this, the data file did not load any public clocks.</p>
-      <div class="board-grid" id="board-rows">
+      <div class="board-list" id="board-rows">
 
-        <article class="board-panel panel-hero" data-provider="Claude">
-          <header class="panel-head">
+        <article class="reset-row" id="r-claude-pro-max-session-5h-2026-09-01" data-id="r-claude-pro-max-session-5h-2026-09-01" data-provider="claude" data-kind="session">
+          <header class="row-head">
             <span class="tile tile-cl" aria-hidden="true">CL</span>
-            <div class="panel-id">
-              <h3>Claude</h3>
-              <p class="panel-plan">Pro / Max / Team</p>
+            <div class="row-id">
+              <h3>Claude <span class="row-sep" aria-hidden="true">·</span> <span class="row-kind">SESSION</span></h3>
+              <p class="row-plan">Pro / Max / Team · every 5 hours</p>
             </div>
-            <div class="panel-meta">
+            <div class="row-meta">
               <span class="badge badge-official">OFFICIAL</span>
               <time datetime="2026-09-03">2026-09-03</time>
             </div>
           </header>
-          <div class="clock-row claude-clocks">
-            <div class="clock-cell" id="r-claude-pro-max-session-5h-2026-09-01" data-id="r-claude-pro-max-session-5h-2026-09-01">
-              <p class="clock-kicker">SESSION</p>
-              <svg viewBox="0 0 120 120" class="clock-svg" aria-hidden="true">
-  <path fill="#C56A27" d="M63.49,10.12 A50,50 0 0 1 106.36,41.27 L80.40,51.76 A22,22 0 0 0 61.53,38.05 Z"/>
-  <path fill="#C56A27" d="M108.51,47.90 A50,50 0 0 1 92.14,98.30 L74.14,76.85 A22,22 0 0 0 81.35,54.68 Z"/>
-  <path fill="#C56A27" d="M86.50,102.40 A50,50 0 0 1 33.50,102.40 L48.34,78.66 A22,22 0 0 0 71.66,78.66 Z"/>
-  <path fill="#C56A27" d="M27.86,98.30 A50,50 0 0 1 11.49,47.90 L38.65,54.68 A22,22 0 0 0 45.86,76.85 Z"/>
-  <path fill="#C56A27" d="M13.64,41.27 A50,50 0 0 1 56.51,10.12 L58.47,38.05 A22,22 0 0 0 39.60,51.76 Z"/>
-  <circle cx="60" cy="60" r="17" fill="none" stroke="#C56A27" stroke-width="1.6" opacity="0.7"/>
-</svg>
-              <p class="clock-label">every 5 hours</p>
-              <a class="clock-source" href="https://support.claude.com/en/articles/8325606-what-is-the-pro-plan">source</a>
-              <details class="clock-quote">
-                <summary>quote</summary>
-                <blockquote>
-                  <p>“Your session-based usage limit will reset every five hours.”</p>
-                  <footer>— <a href="https://support.claude.com/en/articles/8325606-what-is-the-pro-plan">What is the Pro plan? — Anthropic Help Center</a>, retrieved 2026-09-03</footer>
-                </blockquote>
-              </details>
+          <div class="row-hero">
+            <p class="row-countdown" data-row-countdown="r-claude-pro-max-session-5h-2026-09-01" aria-live="polite">—:—:—</p>
+            <div class="row-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-row-progress="r-claude-pro-max-session-5h-2026-09-01">
+              <div class="row-progress-fill" data-row-progress-fill="r-claude-pro-max-session-5h-2026-09-01" style="width:0%"></div>
             </div>
-            <div class="clock-cell" id="r-claude-pro-max-weekly-assigned-2026-09-01" data-id="r-claude-pro-max-weekly-assigned-2026-09-01">
-              <p class="clock-kicker kicker-teal">WEEKLY</p>
-              <svg viewBox="0 0 120 120" class="clock-svg" aria-hidden="true">
-  <circle cx="60" cy="50" r="38" fill="none" stroke="#1A6B63" stroke-width="2.2" opacity="0.5"/>
-  <circle cx="60.00" cy="16.00" r="5" fill="#1A6B63"/>
-  <circle cx="86.58" cy="28.80" r="5" fill="#1A6B63"/>
-  <circle cx="93.15" cy="57.57" r="5" fill="#1A6B63"/>
-  <circle cx="74.75" cy="80.63" r="12" fill="none" stroke="#1A6B63" stroke-width="2.2"/>
-  <circle cx="74.75" cy="80.63" r="7" fill="#1A6B63"/>
-  <circle cx="45.25" cy="80.63" r="5" fill="#1A6B63"/>
-  <circle cx="26.85" cy="57.57" r="5" fill="#1A6B63"/>
-  <circle cx="33.42" cy="28.80" r="5" fill="#1A6B63"/>
-  <text x="75" y="112" text-anchor="middle" fill="#1A6B63" font-size="10" font-family="IBM Plex Sans, sans-serif">assigned</text>
-</svg>
-              <p class="clock-label">assigned time (Settings → Usage)</p>
-              <a class="clock-source" href="https://support.claude.com/en/articles/8325606-what-is-the-pro-plan">source</a>
-              <details class="clock-quote">
-                <summary>quote</summary>
-                <blockquote>
-                  <p>“Pro plans also have a weekly usage limit that applies across all models. Weekly limits reset at a fixed time each week that is assigned to your account. Your reset day and time stay the same regardless of when you start using Claude or when your subscription begins, and you receive your full weekly allowance each cycle. You can see your next reset time in Settings &gt; Usage.”</p>
-                  <footer>— <a href="https://support.claude.com/en/articles/8325606-what-is-the-pro-plan">What is the Pro plan? — Anthropic Help Center</a>, retrieved 2026-09-03</footer>
-                </blockquote>
-              </details>
-            </div>
+            <p class="row-hint" data-row-hint="r-claude-pro-max-session-5h-2026-09-01">Start session</p>
+          </div>
+          <div class="row-sub">
+            <p class="row-fact">Session-based usage limit resets every five hours.</p>
+            <a class="clock-source" href="https://support.claude.com/en/articles/8325606-what-is-the-pro-plan">source</a>
+            <details class="clock-quote">
+              <summary>quote</summary>
+              <blockquote>
+                <p>“Your session-based usage limit will reset every five hours.”</p>
+                <footer>— <a href="https://support.claude.com/en/articles/8325606-what-is-the-pro-plan">What is the Pro plan? — Anthropic Help Center</a>, retrieved 2026-09-03</footer>
+              </blockquote>
+            </details>
           </div>
         </article>
 
-        <article class="board-panel" data-provider="Gemini">
-          <header class="panel-head">
+        <article class="reset-row" id="r-claude-pro-max-weekly-assigned-2026-09-01" data-id="r-claude-pro-max-weekly-assigned-2026-09-01" data-provider="claude" data-kind="weekly">
+          <header class="row-head">
+            <span class="tile tile-cl" aria-hidden="true">CL</span>
+            <div class="row-id">
+              <h3>Claude <span class="row-sep" aria-hidden="true">·</span> <span class="row-kind kicker-teal">WEEKLY</span></h3>
+              <p class="row-plan">Pro / Max / Team · assigned time (Settings → Usage)</p>
+            </div>
+            <div class="row-meta">
+              <span class="badge badge-official">OFFICIAL</span>
+              <time datetime="2026-09-03">2026-09-03</time>
+            </div>
+          </header>
+          <div class="row-hero">
+            <p class="row-countdown" data-row-countdown="r-claude-pro-max-weekly-assigned-2026-09-01" aria-live="polite">—:—:—</p>
+            <div class="row-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-row-progress="r-claude-pro-max-weekly-assigned-2026-09-01">
+              <div class="row-progress-fill" data-row-progress-fill="r-claude-pro-max-weekly-assigned-2026-09-01" style="width:0%"></div>
+            </div>
+            <p class="row-hint" data-row-hint="r-claude-pro-max-weekly-assigned-2026-09-01">Paste reset time</p>
+          </div>
+          <div class="row-sub">
+            <p class="row-fact">Weekly limit resets at a fixed time assigned to your account (Settings &gt; Usage).</p>
+            <a class="clock-source" href="https://support.claude.com/en/articles/8325606-what-is-the-pro-plan">source</a>
+            <details class="clock-quote">
+              <summary>quote</summary>
+              <blockquote>
+                <p>“Pro plans also have a weekly usage limit that applies across all models. Weekly limits reset at a fixed time each week that is assigned to your account. Your reset day and time stay the same regardless of when you start using Claude or when your subscription begins, and you receive your full weekly allowance each cycle. You can see your next reset time in Settings &gt; Usage.”</p>
+                <footer>— <a href="https://support.claude.com/en/articles/8325606-what-is-the-pro-plan">What is the Pro plan? — Anthropic Help Center</a>, retrieved 2026-09-03</footer>
+              </blockquote>
+            </details>
+          </div>
+        </article>
+
+        <article class="reset-row" id="r-gemini-apps-compute-5h-2026-09-01" data-id="r-gemini-apps-compute-5h-2026-09-01" data-provider="gemini" data-kind="session">
+          <header class="row-head">
             <span class="tile tile-gm" aria-hidden="true">GM</span>
-            <div class="panel-id">
-              <h3>Gemini</h3>
-              <p class="panel-plan">Gemini Apps</p>
+            <div class="row-id">
+              <h3>Gemini <span class="row-sep" aria-hidden="true">·</span> <span class="row-kind">SESSION</span></h3>
+              <p class="row-plan">Gemini Apps · every 5 hours until weekly</p>
             </div>
-            <div class="panel-meta">
+            <div class="row-meta">
               <span class="badge badge-official">OFFICIAL</span>
               <time datetime="2026-09-03">2026-09-03</time>
             </div>
           </header>
-          <div class="clock-row">
-            <div class="clock-cell" id="r-gemini-apps-compute-5h-2026-09-01" data-id="r-gemini-apps-compute-5h-2026-09-01">
-              <p class="clock-kicker">SESSION</p>
-              <svg viewBox="0 0 120 120" class="clock-svg" aria-hidden="true">
-  <path fill="#C56A27" d="M63.49,10.12 A50,50 0 0 1 106.36,41.27 L80.40,51.76 A22,22 0 0 0 61.53,38.05 Z"/>
-  <path fill="#C56A27" d="M108.51,47.90 A50,50 0 0 1 92.14,98.30 L74.14,76.85 A22,22 0 0 0 81.35,54.68 Z"/>
-  <path fill="#C56A27" d="M86.50,102.40 A50,50 0 0 1 33.50,102.40 L48.34,78.66 A22,22 0 0 0 71.66,78.66 Z"/>
-  <path fill="#C56A27" d="M27.86,98.30 A50,50 0 0 1 11.49,47.90 L38.65,54.68 A22,22 0 0 0 45.86,76.85 Z"/>
-  <path fill="#C56A27" d="M13.64,41.27 A50,50 0 0 1 56.51,10.12 L58.47,38.05 A22,22 0 0 0 39.60,51.76 Z"/>
-  <circle cx="60" cy="60" r="17" fill="none" stroke="#C56A27" stroke-width="1.6" opacity="0.7"/>
-</svg>
-              <p class="clock-label">every 5 hours until weekly</p>
-              <a class="clock-source" href="https://support.google.com/gemini/answer/16275805">source</a>
-              <details class="clock-quote">
-                <summary>quote</summary>
-                <blockquote>
-                  <p>“Your limit refreshes every 5 hours until you reach your weekly limit.”</p>
-                  <footer>— <a href="https://support.google.com/gemini/answer/16275805">Gemini Apps limits &amp; upgrades for Google AI subscribers — Gemini Apps Help</a>, retrieved 2026-09-03</footer>
-                </blockquote>
-              </details>
+          <div class="row-hero">
+            <p class="row-countdown" data-row-countdown="r-gemini-apps-compute-5h-2026-09-01" aria-live="polite">—:—:—</p>
+            <div class="row-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-row-progress="r-gemini-apps-compute-5h-2026-09-01">
+              <div class="row-progress-fill" data-row-progress-fill="r-gemini-apps-compute-5h-2026-09-01" style="width:0%"></div>
             </div>
+            <p class="row-hint" data-row-hint="r-gemini-apps-compute-5h-2026-09-01">Start session</p>
+          </div>
+          <div class="row-sub">
+            <p class="row-fact">Compute limit refreshes every 5 hours until the weekly limit.</p>
+            <a class="clock-source" href="https://support.google.com/gemini/answer/16275805">source</a>
+            <details class="clock-quote">
+              <summary>quote</summary>
+              <blockquote>
+                <p>“Your limit refreshes every 5 hours until you reach your weekly limit.”</p>
+                <footer>— <a href="https://support.google.com/gemini/answer/16275805">Gemini Apps limits &amp; upgrades for Google AI subscribers — Gemini Apps Help</a>, retrieved 2026-09-03</footer>
+              </blockquote>
+            </details>
           </div>
         </article>
 
-        <article class="board-panel" data-provider="Copilot">
-          <header class="panel-head">
+        <article class="reset-row" id="r-github-copilot-individuals-monthly-utc-2026-09-01" data-id="r-github-copilot-individuals-monthly-utc-2026-09-01" data-provider="copilot" data-kind="copilot">
+          <header class="row-head">
             <span class="tile tile-cp" aria-hidden="true">CP</span>
-            <div class="panel-id">
-              <h3>Copilot</h3>
-              <p class="panel-plan">Free / Pro / Pro+ / Max</p>
+            <div class="row-id">
+              <h3>Copilot <span class="row-sep" aria-hidden="true">·</span> <span class="row-kind">CALENDAR</span></h3>
+              <p class="row-plan">Free / Pro / Pro+ / Max · 00:00 UTC on the 1st</p>
             </div>
-            <div class="panel-meta">
+            <div class="row-meta">
               <span class="badge badge-official">OFFICIAL</span>
               <time datetime="2026-09-03">2026-09-03</time>
             </div>
           </header>
-          <div class="clock-row">
-            <div class="clock-cell" id="r-github-copilot-individuals-monthly-utc-2026-09-01" data-id="r-github-copilot-individuals-monthly-utc-2026-09-01">
-              <p class="clock-kicker">CALENDAR</p>
-              <svg viewBox="0 0 100 118" class="clock-svg clock-cal" aria-hidden="true">
-  <rect x="16" y="18" width="68" height="84" rx="7" fill="#1C2128" stroke="#C56A27" stroke-width="2.4"/>
-  <path d="M16 25 a7 7 0 0 1 7-7 h54 a7 7 0 0 1 7 7 v16 H16 Z" fill="#C56A27"/>
-  <circle cx="30" cy="27" r="2.2" fill="#12161C"/>
-  <circle cx="50" cy="27" r="2.2" fill="#12161C"/>
-  <circle cx="70" cy="27" r="2.2" fill="#12161C"/>
-  <text x="50" y="78" text-anchor="middle" fill="#F3EEE4" font-size="34" font-weight="500" font-family="IBM Plex Sans, sans-serif">1</text>
-  <text x="50" y="94" text-anchor="middle" fill="#C56A27" font-size="8.5" font-family="IBM Plex Mono, monospace">00:00 UTC</text>
-</svg>
-              <p class="clock-label">00:00 UTC on the 1st</p>
-              <a class="clock-source" href="https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals">source</a>
-              <details class="clock-quote">
-                <summary>quote</summary>
-                <blockquote>
-                  <p>“Included AI credits do not carry over between months. Unused credits are forfeited, and your allowance resets to the full monthly amount at 00:00:00 UTC on the first day of each calendar month. This reset date is fixed and does not change based on your subscription billing date.”</p>
-                  <footer>— <a href="https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals">Usage-based billing for individuals — GitHub Docs</a>, retrieved 2026-09-03</footer>
-                </blockquote>
-              </details>
+          <div class="row-hero">
+            <p class="row-countdown" data-row-countdown="r-github-copilot-individuals-monthly-utc-2026-09-01" aria-live="polite">—:—:—</p>
+            <div class="row-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-row-progress="r-github-copilot-individuals-monthly-utc-2026-09-01">
+              <div class="row-progress-fill" data-row-progress-fill="r-github-copilot-individuals-monthly-utc-2026-09-01" style="width:0%"></div>
             </div>
+            <p class="row-hint" data-row-hint="r-github-copilot-individuals-monthly-utc-2026-09-01">Next 1st 00:00 UTC</p>
+          </div>
+          <div class="row-sub">
+            <p class="row-fact">Included AI credits reset at 00:00:00 UTC on the 1st of each calendar month.</p>
+            <a class="clock-source" href="https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals">source</a>
+            <details class="clock-quote">
+              <summary>quote</summary>
+              <blockquote>
+                <p>“Included AI credits do not carry over between months. Unused credits are forfeited, and your allowance resets to the full monthly amount at 00:00:00 UTC on the first day of each calendar month. This reset date is fixed and does not change based on your subscription billing date.”</p>
+                <footer>— <a href="https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals">Usage-based billing for individuals — GitHub Docs</a>, retrieved 2026-09-03</footer>
+              </blockquote>
+            </details>
           </div>
         </article>
 
-        <article class="board-panel" data-provider="Cursor">
-          <header class="panel-head">
+        <article class="reset-row" id="r-cursor-billing-cycle-monthly-2026-09-01" data-id="r-cursor-billing-cycle-monthly-2026-09-01" data-provider="cursor" data-kind="cursor">
+          <header class="row-head">
             <span class="tile tile-cr" aria-hidden="true">CR</span>
-            <div class="panel-id">
-              <h3>Cursor</h3>
-              <p class="panel-plan">Pro / Pro Plus / Ultra</p>
+            <div class="row-id">
+              <h3>Cursor <span class="row-sep" aria-hidden="true">·</span> <span class="row-kind">CYCLE</span></h3>
+              <p class="row-plan">Pro / Pro Plus / Ultra · billing cycle (no leftover)</p>
             </div>
-            <div class="panel-meta">
+            <div class="row-meta">
               <span class="badge badge-official">OFFICIAL</span>
               <time datetime="2026-09-03">2026-09-03</time>
             </div>
           </header>
-          <div class="clock-row">
-            <div class="clock-cell" id="r-cursor-billing-cycle-monthly-2026-09-01" data-id="r-cursor-billing-cycle-monthly-2026-09-01">
-              <p class="clock-kicker">CYCLE</p>
-              <svg viewBox="0 0 120 120" class="clock-svg" aria-hidden="true">
-  <circle cx="60" cy="58" r="36" fill="none" stroke="#3D424A" stroke-width="2.2"/>
-  <path d="M80.6,28.5 A36,36 0 1 1 30.5,37.4" fill="none" stroke="#C56A27" stroke-width="7" stroke-linecap="round"/>
-  <polygon points="36.2,29.2 33.7,43.3 23.9,36.4" fill="#C56A27"/>
-</svg>
-              <p class="clock-label">billing cycle (no leftover)</p>
-              <a class="clock-source" href="https://cursor.com/help/models-and-usage/usage-limits">source</a>
-              <details class="clock-quote">
-                <summary>quote</summary>
-                <blockquote>
-                  <p>“Usage resets monthly with your billing cycle. Unused usage does not roll over. The reset date is shown on the Spending tab.”</p>
-                  <footer>— <a href="https://cursor.com/help/models-and-usage/usage-limits">Usage and limits — Cursor Help</a>, retrieved 2026-09-03</footer>
-                </blockquote>
-              </details>
+          <div class="row-hero">
+            <p class="row-countdown" data-row-countdown="r-cursor-billing-cycle-monthly-2026-09-01" aria-live="polite">—:—:—</p>
+            <div class="row-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-row-progress="r-cursor-billing-cycle-monthly-2026-09-01">
+              <div class="row-progress-fill" data-row-progress-fill="r-cursor-billing-cycle-monthly-2026-09-01" style="width:0%"></div>
             </div>
+            <p class="row-hint" data-row-hint="r-cursor-billing-cycle-monthly-2026-09-01">Paste reset time</p>
+          </div>
+          <div class="row-sub">
+            <p class="row-fact">Usage resets monthly with the billing cycle; unused does not roll over.</p>
+            <a class="clock-source" href="https://cursor.com/help/models-and-usage/usage-limits">source</a>
+            <details class="clock-quote">
+              <summary>quote</summary>
+              <blockquote>
+                <p>“Usage resets monthly with your billing cycle. Unused usage does not roll over. The reset date is shown on the Spending tab.”</p>
+                <footer>— <a href="https://cursor.com/help/models-and-usage/usage-limits">Usage and limits — Cursor Help</a>, retrieved 2026-09-03</footer>
+              </blockquote>
+            </details>
           </div>
         </article>
 
-        <article class="board-panel" data-provider="Grok">
-          <header class="panel-head">
+        <article class="reset-row" id="r-grok-supergrok-weekly-pool-2026-09-03" data-id="r-grok-supergrok-weekly-pool-2026-09-03" data-provider="grok" data-kind="weekly">
+          <header class="row-head">
             <span class="tile tile-gk" aria-hidden="true">GK</span>
-            <div class="panel-id">
-              <h3>Grok</h3>
-              <p class="panel-plan">SuperGrok</p>
+            <div class="row-id">
+              <h3>Grok <span class="row-sep" aria-hidden="true">·</span> <span class="row-kind kicker-teal">WEEKLY</span></h3>
+              <p class="row-plan">SuperGrok · schedule (Settings → Usage)</p>
             </div>
-            <div class="panel-meta">
+            <div class="row-meta">
               <span class="badge badge-official">OFFICIAL</span>
               <time datetime="2026-09-03">2026-09-03</time>
             </div>
           </header>
-          <div class="clock-row">
-            <div class="clock-cell" id="r-grok-supergrok-weekly-pool-2026-09-03" data-id="r-grok-supergrok-weekly-pool-2026-09-03">
-              <p class="clock-kicker kicker-teal">WEEKLY</p>
-              <svg viewBox="0 0 120 120" class="clock-svg" aria-hidden="true">
-  <circle cx="60" cy="50" r="38" fill="none" stroke="#1A6B63" stroke-width="2.2" opacity="0.5"/>
-  <circle cx="60.00" cy="16.00" r="5" fill="#1A6B63"/>
-  <circle cx="86.58" cy="28.80" r="5" fill="#1A6B63"/>
-  <circle cx="93.15" cy="57.57" r="5" fill="#1A6B63"/>
-  <circle cx="74.75" cy="80.63" r="12" fill="none" stroke="#1A6B63" stroke-width="2.2"/>
-  <circle cx="74.75" cy="80.63" r="7" fill="#1A6B63"/>
-  <circle cx="45.25" cy="80.63" r="5" fill="#1A6B63"/>
-  <circle cx="26.85" cy="57.57" r="5" fill="#1A6B63"/>
-  <circle cx="33.42" cy="28.80" r="5" fill="#1A6B63"/>
-  <text x="75" y="112" text-anchor="middle" fill="#1A6B63" font-size="10" font-family="IBM Plex Sans, sans-serif">weekly</text>
-</svg>
-              <p class="clock-label">schedule (Settings → Usage)</p>
-              <a class="clock-source" href="https://docs.x.ai/grok/faq">source</a>
-              <details class="clock-quote">
-                <summary>quote</summary>
-                <blockquote>
-                  <p>“The usage pool limit resets every week on a schedule shown in the Usage tab in Settings.”</p>
-                  <footer>— <a href="https://docs.x.ai/grok/faq">FAQ - Grok Website / Apps — xAI Docs</a>, retrieved 2026-09-03</footer>
-                </blockquote>
-              </details>
+          <div class="row-hero">
+            <p class="row-countdown" data-row-countdown="r-grok-supergrok-weekly-pool-2026-09-03" aria-live="polite">—:—:—</p>
+            <div class="row-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-row-progress="r-grok-supergrok-weekly-pool-2026-09-03">
+              <div class="row-progress-fill" data-row-progress-fill="r-grok-supergrok-weekly-pool-2026-09-03" style="width:0%"></div>
             </div>
+            <p class="row-hint" data-row-hint="r-grok-supergrok-weekly-pool-2026-09-03">Paste reset time</p>
+          </div>
+          <div class="row-sub">
+            <p class="row-fact">Shared weekly usage pool resets every week on a schedule shown in Settings → Usage.</p>
+            <a class="clock-source" href="https://docs.x.ai/grok/faq">source</a>
+            <details class="clock-quote">
+              <summary>quote</summary>
+              <blockquote>
+                <p>“The usage pool limit resets every week on a schedule shown in the Usage tab in Settings.”</p>
+                <footer>— <a href="https://docs.x.ai/grok/faq">FAQ - Grok Website / Apps — xAI Docs</a>, retrieved 2026-09-03</footer>
+              </blockquote>
+            </details>
           </div>
         </article>
 
       </div>
     </section>
-
-    <section id="playbook" class="playbook" hidden></section>
+<section id="playbook" class="playbook" hidden></section>
 
     <footer class="foot">
       <span>Independent, not affiliated with any AI provider; official docs outrank this board.</span>
@@ -323,70 +308,78 @@
       }
       bootStack(dateEl && dateEl.textContent);
 
-      var GRAPHICS = {
-        session5: "<svg viewBox=\"0 0 120 120\" class=\"clock-svg\" aria-hidden=\"true\"><path fill=\"#C56A27\" d=\"M63.49,10.12 A50,50 0 0 1 106.36,41.27 L80.40,51.76 A22,22 0 0 0 61.53,38.05 Z\"/><path fill=\"#C56A27\" d=\"M108.51,47.90 A50,50 0 0 1 92.14,98.30 L74.14,76.85 A22,22 0 0 0 81.35,54.68 Z\"/><path fill=\"#C56A27\" d=\"M86.50,102.40 A50,50 0 0 1 33.50,102.40 L48.34,78.66 A22,22 0 0 0 71.66,78.66 Z\"/><path fill=\"#C56A27\" d=\"M27.86,98.30 A50,50 0 0 1 11.49,47.90 L38.65,54.68 A22,22 0 0 0 45.86,76.85 Z\"/><path fill=\"#C56A27\" d=\"M13.64,41.27 A50,50 0 0 1 56.51,10.12 L58.47,38.05 A22,22 0 0 0 39.60,51.76 Z\"/><circle cx=\"60\" cy=\"60\" r=\"17\" fill=\"none\" stroke=\"#C56A27\" stroke-width=\"1.6\" opacity=\"0.7\"/></svg>",
-        weekly7: "<svg viewBox=\"0 0 120 120\" class=\"clock-svg\" aria-hidden=\"true\"><circle cx=\"60\" cy=\"50\" r=\"38\" fill=\"none\" stroke=\"#1A6B63\" stroke-width=\"2.2\" opacity=\"0.5\"/><circle cx=\"60.00\" cy=\"16.00\" r=\"5\" fill=\"#1A6B63\"/><circle cx=\"86.58\" cy=\"28.80\" r=\"5\" fill=\"#1A6B63\"/><circle cx=\"93.15\" cy=\"57.57\" r=\"5\" fill=\"#1A6B63\"/><circle cx=\"74.75\" cy=\"80.63\" r=\"12\" fill=\"none\" stroke=\"#1A6B63\" stroke-width=\"2.2\"/><circle cx=\"74.75\" cy=\"80.63\" r=\"7\" fill=\"#1A6B63\"/><circle cx=\"45.25\" cy=\"80.63\" r=\"5\" fill=\"#1A6B63\"/><circle cx=\"26.85\" cy=\"57.57\" r=\"5\" fill=\"#1A6B63\"/><circle cx=\"33.42\" cy=\"28.80\" r=\"5\" fill=\"#1A6B63\"/><text x=\"75\" y=\"112\" text-anchor=\"middle\" fill=\"#1A6B63\" font-size=\"10\" font-family=\"IBM Plex Sans, sans-serif\">assigned</text></svg>",
-        calendar1: "<svg viewBox=\"0 0 100 118\" class=\"clock-svg clock-cal\" aria-hidden=\"true\"><rect x=\"16\" y=\"18\" width=\"68\" height=\"84\" rx=\"7\" fill=\"#1C2128\" stroke=\"#C56A27\" stroke-width=\"2.4\"/><path d=\"M16 25 a7 7 0 0 1 7-7 h54 a7 7 0 0 1 7 7 v16 H16 Z\" fill=\"#C56A27\"/><circle cx=\"30\" cy=\"27\" r=\"2.2\" fill=\"#12161C\"/><circle cx=\"50\" cy=\"27\" r=\"2.2\" fill=\"#12161C\"/><circle cx=\"70\" cy=\"27\" r=\"2.2\" fill=\"#12161C\"/><text x=\"50\" y=\"78\" text-anchor=\"middle\" fill=\"#F3EEE4\" font-size=\"34\" font-weight=\"500\" font-family=\"IBM Plex Sans, sans-serif\">1</text><text x=\"50\" y=\"94\" text-anchor=\"middle\" fill=\"#C56A27\" font-size=\"8.5\" font-family=\"IBM Plex Mono, monospace\">00:00 UTC</text></svg>",
-        cycle: "<svg viewBox=\"0 0 120 120\" class=\"clock-svg\" aria-hidden=\"true\"><circle cx=\"60\" cy=\"58\" r=\"36\" fill=\"none\" stroke=\"#3D424A\" stroke-width=\"2.2\"/><path d=\"M80.6,28.5 A36,36 0 1 1 30.5,37.4\" fill=\"none\" stroke=\"#C56A27\" stroke-width=\"7\" stroke-linecap=\"round\"/><polygon points=\"36.2,29.2 33.7,43.3 23.9,36.4\" fill=\"#C56A27\"/></svg>",
-        weeklyPool: "<svg viewBox=\"0 0 120 120\" class=\"clock-svg\" aria-hidden=\"true\"><circle cx=\"60\" cy=\"50\" r=\"38\" fill=\"none\" stroke=\"#1A6B63\" stroke-width=\"2.2\" opacity=\"0.5\"/><circle cx=\"60.00\" cy=\"16.00\" r=\"5\" fill=\"#1A6B63\"/><circle cx=\"86.58\" cy=\"28.80\" r=\"5\" fill=\"#1A6B63\"/><circle cx=\"93.15\" cy=\"57.57\" r=\"5\" fill=\"#1A6B63\"/><circle cx=\"74.75\" cy=\"80.63\" r=\"12\" fill=\"none\" stroke=\"#1A6B63\" stroke-width=\"2.2\"/><circle cx=\"74.75\" cy=\"80.63\" r=\"7\" fill=\"#1A6B63\"/><circle cx=\"45.25\" cy=\"80.63\" r=\"5\" fill=\"#1A6B63\"/><circle cx=\"26.85\" cy=\"57.57\" r=\"5\" fill=\"#1A6B63\"/><circle cx=\"33.42\" cy=\"28.80\" r=\"5\" fill=\"#1A6B63\"/><text x=\"75\" y=\"112\" text-anchor=\"middle\" fill=\"#1A6B63\" font-size=\"10\" font-family=\"IBM Plex Sans, sans-serif\">weekly</text></svg>"
-      };
-
-      var PANELS = [
+      var ROWS = [
         {
-          key: "claude",
+          id: "r-claude-pro-max-session-5h-2026-09-01",
           letter: "CL",
           tile: "tile-cl",
           name: "Claude",
+          providerKey: "claude",
+          kind: "SESSION",
+          kindClass: "",
+          toolKind: "session",
           planShort: "Pro / Max / Team",
-          hero: true,
-          clocks: [
-            { id: "r-claude-pro-max-session-5h-2026-09-01", graphic: "session5", kicker: "SESSION", kickerClass: "", label: "every 5 hours" },
-            { id: "r-claude-pro-max-weekly-assigned-2026-09-01", graphic: "weekly7", kicker: "WEEKLY", kickerClass: "kicker-teal", label: "assigned time (Settings → Usage)" }
-          ]
+          label: "every 5 hours"
         },
         {
-          key: "gemini",
+          id: "r-claude-pro-max-weekly-assigned-2026-09-01",
+          letter: "CL",
+          tile: "tile-cl",
+          name: "Claude",
+          providerKey: "claude",
+          kind: "WEEKLY",
+          kindClass: "kicker-teal",
+          toolKind: "weekly",
+          planShort: "Pro / Max / Team",
+          label: "assigned time (Settings → Usage)"
+        },
+        {
+          id: "r-gemini-apps-compute-5h-2026-09-01",
           letter: "GM",
           tile: "tile-gm",
           name: "Gemini",
+          providerKey: "gemini",
+          kind: "SESSION",
+          kindClass: "",
+          toolKind: "session",
           planShort: "Gemini Apps",
-          hero: false,
-          clocks: [
-            { id: "r-gemini-apps-compute-5h-2026-09-01", graphic: "session5", kicker: "SESSION", kickerClass: "", label: "every 5 hours until weekly" }
-          ]
+          label: "every 5 hours until weekly"
         },
         {
-          key: "copilot",
+          id: "r-github-copilot-individuals-monthly-utc-2026-09-01",
           letter: "CP",
           tile: "tile-cp",
           name: "Copilot",
+          providerKey: "copilot",
+          kind: "CALENDAR",
+          kindClass: "",
+          toolKind: "copilot",
           planShort: "Free / Pro / Pro+ / Max",
-          hero: false,
-          clocks: [
-            { id: "r-github-copilot-individuals-monthly-utc-2026-09-01", graphic: "calendar1", kicker: "CALENDAR", kickerClass: "", label: "00:00 UTC on the 1st" }
-          ]
+          label: "00:00 UTC on the 1st"
         },
         {
-          key: "cursor",
+          id: "r-cursor-billing-cycle-monthly-2026-09-01",
           letter: "CR",
           tile: "tile-cr",
           name: "Cursor",
+          providerKey: "cursor",
+          kind: "CYCLE",
+          kindClass: "",
+          toolKind: "cursor",
           planShort: "Pro / Pro Plus / Ultra",
-          hero: false,
-          clocks: [
-            { id: "r-cursor-billing-cycle-monthly-2026-09-01", graphic: "cycle", kicker: "CYCLE", kickerClass: "", label: "billing cycle (no leftover)" }
-          ]
+          label: "billing cycle (no leftover)"
         },
         {
-          key: "grok",
+          id: "r-grok-supergrok-weekly-pool-2026-09-03",
           letter: "GK",
           tile: "tile-gk",
           name: "Grok",
+          providerKey: "grok",
+          kind: "WEEKLY",
+          kindClass: "kicker-teal",
+          toolKind: "weekly",
           planShort: "SuperGrok",
-          hero: false,
-          clocks: [
-            { id: "r-grok-supergrok-weekly-pool-2026-09-03", graphic: "weeklyPool", kicker: "WEEKLY", kickerClass: "kicker-teal", label: "schedule (Settings → Usage)" }
-          ]
+          label: "schedule (Settings → Usage)"
         }
       ];
 
@@ -406,64 +399,64 @@
         return true;
       }
 
-      function renderClock(cfg, row) {
+      function placeholderFor(toolKind) {
+        if (toolKind === "session") return "Start session";
+        if (toolKind === "copilot") return "Next 1st 00:00 UTC";
+        return "Paste reset time";
+      }
+
+      function renderRow(cfg, row) {
         var src = row.official_source || {};
         var url = src.url || "";
         var quote = src.quote || "";
         var retrieved = src.retrieved_date || row.last_verified_date || "";
         var title = src.title || row.source_display || "Source";
+        var verified = row.last_verified_date || "";
+        var status = row.verification_status || "OFFICIAL";
+        var badgeClass = "badge badge-" + String(status).toLowerCase();
+        var kindClass = "row-kind" + (cfg.kindClass ? " " + cfg.kindClass : "");
+        var fact = row.reset_fact || cfg.label;
         var srcLink = url
           ? '<a class="clock-source" href="' + esc(url) + '">source</a>'
           : "";
         var quoteLink = url
           ? '<a href="' + esc(url) + '">' + esc(title) + "</a>"
           : esc(title);
-        var kickerClass = "clock-kicker" + (cfg.kickerClass ? " " + cfg.kickerClass : "");
         return (
-          '<div class="clock-cell" id="' + esc(row.id) + '" data-id="' + esc(row.id) + '">' +
-            '<p class="' + kickerClass + '">' + esc(cfg.kicker) + "</p>" +
-            (GRAPHICS[cfg.graphic] || "") +
-            '<p class="clock-label">' + esc(cfg.label) + "</p>" +
-            srcLink +
-            '<details class="clock-quote">' +
-              "<summary>quote</summary>" +
-              "<blockquote>" +
-                "<p>“" + esc(quote) + "”</p>" +
-                "<footer>— " + quoteLink + ", retrieved " + esc(retrieved) + "</footer>" +
-              "</blockquote>" +
-            "</details>" +
-          "</div>"
-        );
-      }
-
-      function renderPanel(panel, byId) {
-        var clocks = [];
-        var verified = "";
-        var status = "OFFICIAL";
-        for (var i = 0; i < panel.clocks.length; i++) {
-          var row = byId[panel.clocks[i].id];
-          if (!row) continue;
-          clocks.push(renderClock(panel.clocks[i], row));
-          verified = verified || row.last_verified_date || "";
-          status = row.verification_status || status;
-        }
-        if (!clocks.length) return "";
-        var badgeClass = "badge badge-" + String(status).toLowerCase();
-        var rowClass = "clock-row" + (panel.hero ? " claude-clocks" : "");
-        return (
-          '<article class="board-panel' + (panel.hero ? " panel-hero" : "") + '" data-provider="' + esc(panel.name) + '">' +
-            '<header class="panel-head">' +
-              '<span class="tile ' + esc(panel.tile) + '" aria-hidden="true">' + esc(panel.letter) + "</span>" +
-              '<div class="panel-id">' +
-                "<h3>" + esc(panel.name) + "</h3>" +
-                '<p class="panel-plan">' + esc(panel.planShort) + "</p>" +
+          '<article class="reset-row" id="' + esc(row.id) + '" data-id="' + esc(row.id) +
+            '" data-provider="' + esc(cfg.providerKey) + '" data-kind="' + esc(cfg.toolKind) + '">' +
+            '<header class="row-head">' +
+              '<span class="tile ' + esc(cfg.tile) + '" aria-hidden="true">' + esc(cfg.letter) + "</span>" +
+              '<div class="row-id">' +
+                "<h3>" + esc(cfg.name) +
+                  ' <span class="row-sep" aria-hidden="true">·</span> ' +
+                  '<span class="' + kindClass + '">' + esc(cfg.kind) + "</span>" +
+                "</h3>" +
+                '<p class="row-plan">' + esc(cfg.planShort) + " · " + esc(cfg.label) + "</p>" +
               "</div>" +
-              '<div class="panel-meta">' +
+              '<div class="row-meta">' +
                 '<span class="' + esc(badgeClass) + '">' + esc(status) + "</span>" +
                 (verified ? '<time datetime="' + esc(verified) + '">' + esc(verified) + "</time>" : "") +
               "</div>" +
             "</header>" +
-            '<div class="' + rowClass + '">' + clocks.join("") + "</div>" +
+            '<div class="row-hero">' +
+              '<p class="row-countdown" data-row-countdown="' + esc(row.id) + '" aria-live="polite">—:—:—</p>' +
+              '<div class="row-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-row-progress="' + esc(row.id) + '">' +
+                '<div class="row-progress-fill" data-row-progress-fill="' + esc(row.id) + '" style="width:0%"></div>' +
+              "</div>" +
+              '<p class="row-hint" data-row-hint="' + esc(row.id) + '">' + esc(placeholderFor(cfg.toolKind)) + "</p>" +
+            "</div>" +
+            '<div class="row-sub">' +
+              '<p class="row-fact">' + esc(fact) + "</p>" +
+              srcLink +
+              '<details class="clock-quote">' +
+                "<summary>quote</summary>" +
+                "<blockquote>" +
+                  "<p>“" + esc(quote) + "”</p>" +
+                  "<footer>— " + quoteLink + ", retrieved " + esc(retrieved) + "</footer>" +
+                "</blockquote>" +
+              "</details>" +
+            "</div>" +
           "</article>"
         );
       }
@@ -485,7 +478,12 @@
           var byId = {};
           for (var i = 0; i < rows.length; i++) byId[rows[i].id] = rows[i];
           var htmlOut = "";
-          for (var p = 0; p < PANELS.length; p++) htmlOut += renderPanel(PANELS[p], byId);
+          for (var r = 0; r < ROWS.length; r++) {
+            var cfg = ROWS[r];
+            var row = byId[cfg.id];
+            if (!row) continue;
+            htmlOut += renderRow(cfg, row);
+          }
           if (!htmlOut) {
             listEl.hidden = true;
             emptyEl.hidden = false;
@@ -510,4 +508,3 @@
     })();
   </script>
 </body>
-</html>
