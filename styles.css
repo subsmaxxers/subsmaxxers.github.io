@@ -972,3 +972,179 @@ body.inner a:visited { color: var(--teal); }
 .board-teaser-copy .teaser-extra {
   color: color-mix(in srgb, var(--teal) 70%, var(--bone));
 }
+
+/* Limit Radar — dated event log; no analog clocks, no giant countdowns. */
+.radar-page .board-wrap { max-width: 44rem; }
+
+.radar-lede {
+  margin: 0 0 1rem;
+  max-width: 36rem;
+  font-size: 0.95rem;
+  color: color-mix(in srgb, var(--bone) 78%, var(--mist));
+}
+
+.radar-section-title {
+  margin: 1.6rem 0 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--bone) 55%, var(--teal));
+}
+
+.radar-section-lede {
+  margin: 0 0 0.75rem;
+  font-size: 0.88rem;
+  color: color-mix(in srgb, var(--bone) 68%, var(--mist));
+}
+
+.radar-log {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.radar-event {
+  min-width: 0;
+  padding: 0.85rem 0.9rem 0.95rem;
+  background: color-mix(in srgb, var(--bone) 4.5%, transparent);
+  border: 1px solid color-mix(in srgb, var(--bone) 12%, transparent);
+  border-radius: 2px;
+  box-shadow: inset 3px 0 0 var(--copper);
+}
+
+.radar-event-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.7rem;
+  margin: 0 0 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--bone) 58%, var(--graphite));
+}
+
+.radar-event-head time { color: var(--copper); }
+.radar-page .radar-event .badge-official { color: var(--copper); }
+.radar-event-provider { color: color-mix(in srgb, var(--bone) 70%, var(--mist)); }
+
+.radar-event h3 {
+  margin: 0 0 0.55rem;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--bone);
+}
+
+.radar-quote {
+  margin: 0 0 0.65rem;
+  padding: 0.55rem 0 0.55rem 0.75rem;
+  border-left: 2px solid color-mix(in srgb, var(--copper) 55%, transparent);
+}
+
+.radar-quote p {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+  color: color-mix(in srgb, var(--bone) 88%, var(--mist));
+}
+
+.radar-quote footer {
+  font-size: 0.78rem;
+  color: color-mix(in srgb, var(--bone) 52%, var(--graphite));
+}
+
+.radar-note {
+  margin: 0;
+  font-size: 0.85rem;
+  color: color-mix(in srgb, var(--bone) 62%, var(--mist));
+}
+
+.kind-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14.5rem, 1fr));
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.kind-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-height: 100%;
+  padding: 0.65rem 0.7rem;
+  text-decoration: none;
+  border: 1px solid color-mix(in srgb, var(--teal) 35%, transparent);
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--teal) 8%, transparent);
+  color: var(--bone);
+}
+
+.kind-chip:visited { color: var(--bone); }
+.kind-chip:hover {
+  border-color: var(--teal);
+  color: var(--bone);
+  background: color-mix(in srgb, var(--teal) 14%, transparent);
+}
+
+.kind-name {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+.kind-fact {
+  font-size: 0.88rem;
+  color: color-mix(in srgb, var(--bone) 78%, var(--mist));
+}
+
+.switch-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid color-mix(in srgb, var(--bone) 12%, transparent);
+}
+
+.switch-list li {
+  padding: 0.55rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--bone) 12%, transparent);
+  font-size: 0.92rem;
+  color: color-mix(in srgb, var(--bone) 86%, var(--mist));
+}
+
+.switch-list li::before {
+  content: "→ ";
+  font-family: var(--font-mono);
+  color: var(--teal);
+}
+
+.radar-digest {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid color-mix(in srgb, var(--bone) 12%, transparent);
+}
+
+.radar-digest-label {
+  margin: 0 0 0.55rem;
+  font-size: 0.88rem;
+  color: color-mix(in srgb, var(--bone) 68%, var(--mist));
+}
+
+.radar-page .fine {
+  margin: 0.45rem 0 0;
+  font-size: 0.78rem;
+  color: color-mix(in srgb, var(--bone) 50%, var(--graphite));
+}
+
+.board-teaser.radar-teaser {
+  margin-bottom: 0.65rem;
+  border-color: color-mix(in srgb, var(--copper) 28%, color-mix(in srgb, var(--bone) 10%, transparent));
+  box-shadow: inset 3px 0 0 var(--copper);
+}

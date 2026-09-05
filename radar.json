@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-09-05",
+  "product": "Limit Radar",
+  "events": [
+    {
+      "id": "e-claude-max-weekly-reset-oneoff-2026-09-04",
+      "date": "2026-09-04",
+      "provider": "claude",
+      "plan": "Max only",
+      "title": "Weekly limits reset for everyone on a Claude Max plan",
+      "quote": "We've just reset weekly limits for everyone on a Claude Max plan.",
+      "source": {
+        "name": "Lydia Hallie on X",
+        "url": "https://x.com/lydiahallie/status/2095967323412930677"
+      },
+      "note": "One-off vendor override. Does not replace the standing Official weekly clock (assigned time in Settings → Usage). Not stated for Pro. Replies about hours-until are REPORTED, not Official.",
+      "verification_status": "OFFICIAL"
+    }
+  ]
+}

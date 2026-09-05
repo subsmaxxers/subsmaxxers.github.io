@@ -37,11 +37,21 @@ Official documentation outranks community conversation when they conflict.
 ## Site
 
 - https://subsmaxxers.com/
+- https://subsmaxxers.com/radar.html
 - https://subsmaxxers.com/reset.html
 - https://subsmaxxers.com/next.html
 - https://subsmaxxers.com/privacy.html
 - https://subsmaxxers.com/guidelines.html
 - https://subsmaxxers.com/llms.txt
+
+
+## Limit Radar (as of 2026-09-05)
+
+- Public page: https://subsmaxxers.com/radar.html — Official vendor changes to the stack. Zero setup. No API keys. No Session started. Timers stay on /reset only.
+- Pretty URL /limits redirects to /radar.html (canonical).
+- First Official event (2026-09-04): Claude Max only — one-off weekly limits reset. Exact quote: "We've just reset weekly limits for everyone on a Claude Max plan." Source: Lydia Hallie on X. This is a one-off vendor override, not a new standing clock. Standing Claude weekly remains assigned time in Settings → Usage. Not stated for Pro. Replies about hours-until are REPORTED, not Official.
+- Clock kinds listed (Official types only, no countdowns): Claude session (every 5 hours), Claude weekly (assigned time), Gemini Apps (5 hours until weekly; weekday not published), Copilot (00:00 UTC on the 1st), Cursor (billing cycle / Spending tab), SuperGrok (weekly pool / Settings → Usage). Each links to the Reset Board row.
+- Do not invent clocks, message counts, or weekdays. Official provider docs outrank this page. No Discord invite on Radar (homepage has Join).
 
 ## Reset Board (as of 2026-09-03)
 
